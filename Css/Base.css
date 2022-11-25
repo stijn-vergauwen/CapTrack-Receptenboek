@@ -1,7 +1,4 @@
 /* Colors */
-/* main color: --Main*/
-/* secondary color: #b5b5b5*/
-/* accent color: var(--accent); */
 :root {
     --Main: white;
     --secondary: #b5b5b5;
@@ -23,8 +20,8 @@ a {
     text-decoration: none;
 }
 
-/* General */
 
+/* General */
 body {
     margin: 0;
     font-family: 'Patrick Hand', cursive;
@@ -41,22 +38,22 @@ p {
 
 /* Button styling */
 
-  .container-button-wrap {
+.container-button-wrap {
     width: 40px;
     height: 30px;
     position: relative;
     z-index: 1;
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-  
-  .center-button-wrap {
+}
+
+.center-button-wrap {
     width: 40px;
     height: 30px;
     position: absolute;
-  }
-  
-  .btn-red {
+}
+
+.btn-red {
     width: 40px;
     height: 30px;
     cursor: pointer;
@@ -64,9 +61,9 @@ p {
     border: 1px solid var(--accent);
     outline: none;
     transition: 1s ease-in-out;
-  }
-  
-  svg {
+}
+
+svg {
     position: absolute;
     left: 0;
     top: 0;
@@ -75,23 +72,24 @@ p {
     stroke-dasharray: 150 480;
     stroke-dashoffset: 150;
     transition: 1s ease-in-out;
-  }
-  
-  .btn-red:hover {
+}
+
+.btn-red:hover {
     transition: 1s ease-in-out;
     background: var(--accent);
-  }
-  
-  .btn-red:hover svg {
+}
+
+.btn-red:hover svg {
     stroke-dashoffset: -480;
-  }
-  
-  .btn-red span {
+}
+
+.btn-red span {
     color: var(--Main);
     font-size: 18px;
     font-weight: 100;
-  }
+}
 
+  
 /* Header */
 
 .page-header {
@@ -163,8 +161,6 @@ p {
     border: 3px dotted var(--accent);
     border-radius: 2rem;
 }
-
-
 
 
 /* Recipe steps */
