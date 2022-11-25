@@ -1,0 +1,14 @@
+.page-footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #aaaaaa;
+}
+
+.page-footer .footer-row {
+    display: flex;
+    gap: 6rem;
+    
+}

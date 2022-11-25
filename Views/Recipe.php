@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/Base.css">
+    <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -15,8 +16,8 @@
     <header class="page-header">
         <p>Stijn's & Joost's Receptenboek</p>
         <nav class="header-nav">
-            <a class="nav-link" href="/Views/home.php">Home</a>
-            <a class="nav-link" href="/Views/recipe.php">Recepten</a>
+            <a class="nav-link" href="/Views/Home.php">Home</a>
+            <a class="nav-link" href="/Views/Recipe.php">Recepten</a>
         </nav>
     </header>
 
@@ -63,8 +64,20 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="page-footer">
+        <div class="footer-row">
+            <a href="">media link</a>
+            <a href="">media link</a>
+            <a href="">media link</a>
+        </div>
 
+        <div class="footer-row">
+            <a href="">page link</a>
+            <a href="">page link</a>
+            <a href="">page link</a>
+        </div>
+
+        <p>Copyright</p>
     </footer>
 
     <!-- 
