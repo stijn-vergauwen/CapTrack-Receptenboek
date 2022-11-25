@@ -1,7 +1,7 @@
 /* Colors */
 :root {
     --Main: white;
-    --secondary: #b5b5b5;
+    --secondary: #dbdbdb;
     --accent: #ff3838;
 }
 
@@ -20,6 +20,11 @@ a {
     text-decoration: none;
 }
 
+ol {
+    list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 /* General */
 body {
@@ -31,9 +36,12 @@ h1 {
     font-size: 35px;
 }
 
-p {
+p, li, ol {
     font-size: 25px;
+
 }
+
+
 
 
 /* Button styling */
@@ -132,43 +140,14 @@ svg {
 }
 
 
-/* Recipe header */
-.recipe-header {
-    width: 60rem;
-}
 
-.recipe-header img {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.recipe-header .recipe-description {
-    padding: 2rem;
-    background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(0, 0, 0);
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-}
 
 
 /* Recipe ingredients */
-.recipe-ingredients {
-    padding: 2rem;
-    width: 60rem;
-    background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(0, 0, 0);
-    border: 3px dotted var(--accent);
-    border-radius: 2rem;
-}
 
 
 /* Recipe steps */
-.recipe-steps {
-    padding: 2rem;
-    width: 60rem;
-    background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(0, 0, 0);
-    border: 3px solid var(--accent);
-    border-radius: 2rem;
-}
+
+
+
+
