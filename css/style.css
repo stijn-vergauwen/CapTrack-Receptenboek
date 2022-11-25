@@ -1,3 +1,9 @@
+/* Colors */
+/* main color: white*/
+/* secondary color: #b5b5b5*/
+/* accent color: #ff3838; */
+
+
 /* reset */
 * {
     box-sizing: border-box;
@@ -19,6 +25,68 @@ body {
     font-family: 'Patrick Hand', cursive;
 }
 
+h1 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 25px;
+}
+
+
+/* Button styling */
+
+  .container-button-wrap {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .center-button-wrap {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .btn-red {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #ff3838;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn-red:hover {
+    transition: 1s ease-in-out;
+    background: #ff3838;
+  }
+  
+  .btn-red:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn-red span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
 /* Header */
 
 .page-header {
@@ -31,7 +99,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #aaaaaa;
+    background-color: #b5b5b5;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+    z-index: 100;
 }
 
 .page-header p {
@@ -64,7 +134,6 @@ body {
 
 .recipe-header {
     width: 60rem;
-    
 }
 
 .recipe-header img {
@@ -75,7 +144,8 @@ body {
 
 .recipe-header .recipe-description {
     padding: 2rem;
-    background-color: #aaaaaa;
+    background-color: #b5b5b585;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
@@ -86,9 +156,13 @@ body {
 .recipe-ingredients {
     padding: 2rem;
     width: 60rem;
-    background-color: #aaaaaa;
+    background-color: #b5b5b585;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+    border: 3px dotted #ff3838;
     border-radius: 2rem;
 }
+
+
 
 
 /* Recipe steps */
@@ -96,6 +170,8 @@ body {
 .recipe-steps {
     padding: 2rem;
     width: 60rem;
-    background-color: #aaaaaa;
+    background-color: #b5b5b585;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+    border: 3px dotted #ff3838;
     border-radius: 2rem;
 }
