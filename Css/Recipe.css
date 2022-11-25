@@ -222,11 +222,48 @@
 
 /* Other recipes */
 .recipe-grid-wrap {
-    width: 79rem;
-    height: 42rem;
-    background-color: aqua;
+    background-color: var(--secondary);
     display: grid;
-    grid-template-columns: 25rem 25rem 25rem;
+    grid-template-columns: 30rem 30rem 30rem;
     grid-template-rows: 20rem 20rem;
     gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 25px rgb(174, 174, 174);
 }
+
+.recipe-grid-wrap .grid-obj-styling {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .recipe-grid-wrap .grid-pos-1 {
+    grid-column-start: 1 / 2;
+    grid-row-start: 1 / 2;
+}
+
+.recipe-grid-wrap .grid-pos-2 {
+    grid-column-start: 2 / 3;
+    grid-row-start: 1 / 2;
+}
+
+.recipe-grid-wrap .grid-pos-3 {
+    grid-column-start: 3 / 4;
+    grid-row-start: 1 / 2;
+}
+
+.recipe-grid-wrap .grid-pos-4 {
+    grid-column-start: 1 / 2;
+    grid-row-start: 2 / 3;
+}
+
+.recipe-grid-wrap .grid-pos-5 {
+    grid-column-start: 2 / 3;
+    grid-row-start: 2 / 3;
+}
+
+.recipe-grid-wrap .grid-pos-6 {
+    grid-column-start: 3 / 4;
+    grid-row-start: 2 / 3;
+} */

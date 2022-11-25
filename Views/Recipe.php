@@ -130,15 +130,13 @@
         </section>
 
         <section class="recipe-grid-wrap">
-            <img class="grid-pos-1" src="../Img/chai-latte-cake.jpg" alt="">
-            <img class="grid-pos-2" src="../Img/Recept-placeholder1.jpg" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
+            <img class="grid-obj-styling" src="../Img/Recept-placeholder1.jpg" alt="">
+            <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
+            <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
+            <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
+            <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
         </section>
-
-
     </main>
 
 
