@@ -1,0 +1,148 @@
+/* Recipe description */
+.difficulty-icon-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    height: 2rem;
+    width: 7.5rem;
+    background-color: var(--Main);
+    border-radius: 2rem;
+}
+
+.difficulty-icon-div img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.time-icon-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    height: 2rem;
+    width: 10rem;
+    background-color: var(--Main);
+    border-radius: 2rem;
+    margin-top: 0.3rem;
+}
+
+.time-icon-div img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.difficulty-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.difficulty-icon-seethrough {
+    opacity: 0.3;
+}
+
+.Required-time-text {
+    font-size: 12px;
+}
+
+.info-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* ingredients section */
+
+.page-span-ingredients {
+    width: 100%;
+    min-width: 100vw;
+    height: 30rem;
+    max-height: 500px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,rgba(255,255,255,1)), url(../Img/ingredients.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-top: 5px solid var(--accent);
+}
+
+.page-span-ingredients h2 {
+    background: rgb(133,133,133);
+    background: linear-gradient(0deg, rgba(133,133,133,1) 0%, rgba(0,0,0,1) 60%);   
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1rem;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.582);
+    border-radius: 2rem;
+    padding: 1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.total-person-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.total-person-container p {
+    font-size: 25px;
+}
+
+/* Bereidingswijze */
+.page-span-Bereidingswijze {
+    width: 100%;
+    min-width: 100vw;
+    height: 30rem;
+    max-height: 500px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,
+    rgba(255,255,255,1)), url(../Img/husband-wife-pose-kitchen-preparing-tasty-dinner.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-top: 5px solid var(--accent);
+}
+
+.page-span-Bereidingswijze h2 {
+    background: rgb(133,133,133);
+    background: linear-gradient(0deg, rgba(133,133,133,1) 0%, rgba(0,0,0,1) 60%);   
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1rem;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.582);
+    border-radius: 2rem;
+    padding: 1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+/* styling ul / li */
+.styling-ul li::before {
+    content: "\2022";
+    color: var(--accent);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1rem;
+    margin-left: -1em;
+    font-size: 1.5rem;
+}
+
+.styling-ul {
+    list-style-type: none;
+}
