@@ -66,7 +66,7 @@
     min-width: 100vw;
     height: 30rem;
     max-height: 500px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,rgba(255,255,255,1)), url(../Img/ingredients.jpg);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,rgba(255,255,255,1)), url(../Img/Ingredients.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -107,7 +107,7 @@
     height: 30rem;
     max-height: 500px;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,
-    rgba(255,255,255,1)), url(../Img/husband-wife-pose-kitchen-preparing-tasty-dinner.jpg);
+    rgba(255,255,255,1)), url(../Img/Husband-wife-pose-kitchen-preparing-tasty-dinner.jpg);
     background-repeat: no-repeat;
     background-position: 0% 30%;
     background-size: cover;
