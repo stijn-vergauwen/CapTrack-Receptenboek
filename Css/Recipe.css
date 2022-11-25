@@ -132,6 +132,10 @@
     -moz-text-fill-color: transparent;
 }
 
+.recipe-steps-ol {
+
+}
+
 /* styling ul / li */
 .styling-ul li::before {
     content: "\2022";
