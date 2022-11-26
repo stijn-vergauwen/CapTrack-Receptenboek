@@ -18,11 +18,28 @@
 </head>
 <body>
     <header class="page-header">
-        <p>Stijn's & Joost's Receptenboek</p>
-        <nav class="header-nav">
-            <a class="nav-link" href="/Views/home.php">Home</a>
-            <a class="nav-link" href="/Views/recipe.php">Recepten</a>
-        </nav>
+        <div class="header-div">
+            <img class="gif-header" src="../Img/Stein's&Joost'sKitchenV2.gif" alt="">
+                <a class="nav-link home-location-header" href="../Views/Home.php">
+                    <img class="home-icon" src="../Img/vecteezy_home-icon-sign-symbol-design_10161319_473.png" alt="">
+                    <p>home</p>
+                </a>
+
+                <div class="nav-link home-location-header recipe-location-header dropdown" href="../Views/Recipe.php">
+                    <img class="recipe-icon" src="../Img/recipe-book.png" alt="">  
+                    <p>Recipes</p>
+                    <div class="dropdown-content-recipe">
+                        <span>
+                            <a href="../Views/Recipe.php">Chai latte cake</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                        </span>
+                    </div>
+                </div>
+                
+        </div>
     </header>
 
     <main class="page-content">
@@ -129,12 +146,23 @@
                 <div class="li-flex"><span class="li-styling-numeric">14.</span><li class="steps-li">Maak er ook eens een heerlijke chai tea latte of kurkuma latte bij.</li></div>
             </ol>
             <p class="recipe-steps-p">Eet smakelijk!</p>
+
+            <!-- review -->
+            <p class="rating-text">Review recipe!</p>
+            <div class="rating rating2">
+                <a href="#5" title="Give 5 stars">★</a>
+                <a href="#4" title="Give 4 stars">★</a>
+                <a href="#3" title="Give 3 stars">★</a>
+                <a href="#2" title="Give 2 stars">★</a>
+                <a href="#1" title="Give 1 star">★</a>
+            </div>
+
         </section>
 
         <section class="recipe-grid-wrap">
             
         <!-- Recipe 1 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -158,7 +186,7 @@
         </div>
 
         <!-- Recipe 2 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/stamppot-met-spruitjes.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -182,7 +210,7 @@
         </div>
 
         <!-- Recipe 3 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/wraps-met-kip_b-1.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -206,7 +234,7 @@
         </div>
 
         <!-- Recipe 4 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/lasagne-bolognese.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -230,7 +258,7 @@
         </div>
 
         <!-- Recipe 5 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/placeholder2.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -254,7 +282,7 @@
         </div>
 
         <!-- Recipe 6 -->
-        <div class="recipe-grid-container-flex">
+        <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
             <div class="recipe-grid-container">
                 <img class="grid-obj-styling" src="../Img/placeholder6.jpg" alt="">
                 <div class="recipe-grid-overlay">
@@ -278,6 +306,14 @@
         </div>
 
         </section>
+
+        <section>
+
+        </section>
+
+
+
+
     </main>
 
 

@@ -3,6 +3,7 @@
     --Main: white;
     --secondary: #dbdbdb;
     --accent: #ff3838;
+    --tertiary: #000000;
 }
 
 /* reset */
@@ -35,17 +36,13 @@ h1 {
     font-size: 35px;
 }
 
-p, li, ol {
+p, li, ol, label {
     font-size: 25px;
 
 }
 
 section {
     margin-bottom: 5rem;
-}
-
-label {
-    font-size: 25px;
 }
 
 
@@ -110,16 +107,30 @@ svg {
 .page-header {
     position: fixed;
     top: 0;
-    height: 120px;
+    height: 8rem;
     width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+    padding: 0.3rem;
+    padding-top: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(61,61,61,1) 47%, rgba(0,0,0,1) 100%);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.582);
     z-index: 100;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.header-div {
+    width: 100%;
+    height: 100%;
+    background: rgb(101,101,101);
+    background: linear-gradient(0deg, rgba(101,101,101,0.7567401960784313) 0%, rgba(0,0,0,1) 86%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    padding-top: 1rem;
 }
 
 .page-header p {
@@ -136,25 +147,147 @@ svg {
 }
 
 
-/* Recipe page */
-.page-content {
-    margin-top: 120px;
-    padding: 3rem 0;
+.gif-header {
+    width: 15rem;
+    margin-top: 0;
+}
+
+.home-location-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    justify-content: center;
+    position: absolute;
+    left: 5rem;
+
+}
+
+.home-location-header p{
+    color: var(--Main);
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0.3rem;
+}
+
+.recipe-location-header {
+    left: 12rem;
+    top: 1.7rem;
+}
+
+.home-icon {
+    filter: invert(1);
+    height: 3rem;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border-radius: 3rem;
+}
+
+.nav-link:hover .home-icon {
+    opacity: 0.6;
+    background-color: #81ffff;
+    box-shadow: 0px 0px 30px #00ffff;
+    animation: bounce-in 2s ease;
+  }
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}
+
+.nav-link:hover .recipe-icon {
+    opacity: 0.6;
+    background-color: #81ffff;
+    box-shadow: 0px 0px 30px #00ffff;
+    animation: bounce-in 2s ease;
+  }
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}
+
+.nav-link:hover p {
+    opacity: 0.6;
+}
+
+.recipe-icon {
+    filter: invert(1);
+    height: 3rem;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border-radius: 0.3rem;
+}
+
+.dropdown-content-recipe {
+    display: none;
+    position: absolute;
+    top: 5.3rem;
+    left: 0rem;
+    background: rgb(219,219,219);
+    background: linear-gradient(0deg, rgba(219,219,219,0.30015756302521013) 0%, rgba(101,101,101,1) 82%);
+    min-width: 160px;
+    padding: 0.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    flex-direction: column ;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+
+
+}
+
+.dropdown-content-recipe a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-content-recipe a {
+    font-size: 20px;
+    color: var(--Main);
+}
+
+.dropdown-content-recipe a:hover {
+    box-shadow: 0px 0px 30px var(--accent);
+    background-color: #ff38384a;
+}
+
+.dropdown:hover .dropdown-content-recipe {
+    display: flex;
+    animation: fade-in 0.2s linear;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 
+.dropdown-content-recipe span {
+    background-color: var(--tertiary);
+    padding: 1rem 1rem 0rem 1rem;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
 
 
-
-/* Recipe ingredients */
-
-
-/* Recipe steps */
-
-
-
-
+/* Recipe page */
+.page-content {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+}

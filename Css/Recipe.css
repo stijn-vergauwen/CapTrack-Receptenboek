@@ -224,13 +224,56 @@
     padding: 0;
 }
 
+/* review */
+
+.rating-text {
+    margin-top: 6rem;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    font-size: 45px;
+    overflow:hidden;
+}
+
+.rating a,
+.rating label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction: rtl;
+}
+.rating2 a {
+    float: none;
+}
+
+
+
 /* Other recipes */
 
 .recipe-grid-container-flex{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    cursor: pointer;
 }
 
 .recipe-grid-wrap {
@@ -310,6 +353,13 @@
 .info-overlay-div .time-icon-div {
     margin-top: 0;
 }
+
+
+
+
+
+
+
 
 
 
