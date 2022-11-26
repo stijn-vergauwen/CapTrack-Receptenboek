@@ -140,9 +140,6 @@
     </main>
 
 
-
-
-
 <footer class="page-footer">
         <div class="footer-row">
             <a href="">media link</a>
