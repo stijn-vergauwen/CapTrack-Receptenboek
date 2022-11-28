@@ -1,22 +1,12 @@
 <?php
+require_once("Database.php");
 
 
+$database = new Database();
+$database->createConnection("receptenboek", "root", "");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$testRecipe = $database->getRecipe(1);
+// print_r($testRecipe["title"]);
 
 
 
