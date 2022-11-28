@@ -159,8 +159,16 @@
 
         </section>
 
-        <section class="recipe-grid-wrap">
+        <section class="underline-h2">
             
+
+            <h2>bekijk ook!</h2>
+            <span class=""></span>
+        </section>
+
+
+        <section class="recipe-grid-wrap">
+    
             <!-- Recipe 1 -->
             <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
                 <div class="recipe-grid-container">
