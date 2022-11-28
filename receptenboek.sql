@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 12:42 PM
+-- Generation Time: Nov 28, 2022 at 02:44 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -93,9 +93,10 @@ INSERT INTO `preparation_steps` (`id`, `recipe_id`, `body`, `list_order`) VALUES
 
 CREATE TABLE `recipes` (
   `id` int(11) NOT NULL,
+  `added` timestamp NOT NULL DEFAULT current_timestamp(),
   `title` varchar(40) NOT NULL,
   `description` text NOT NULL,
-  `duration` varchar(20) NOT NULL,
+  `duration` varchar(30) NOT NULL,
   `difficulty` int(3) NOT NULL,
   `default_people_amount` int(11) NOT NULL,
   `thumbnail` varchar(100) NOT NULL
@@ -105,8 +106,8 @@ CREATE TABLE `recipes` (
 -- Dumping data for table `recipes`
 --
 
-INSERT INTO `recipes` (`id`, `title`, `description`, `duration`, `difficulty`, `default_people_amount`, `thumbnail`) VALUES
-(1, 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '20 min + 1 uur ovent', 3, 10, '../Img/chai-latte-cake.jpg');
+INSERT INTO `recipes` (`id`, `added`, `title`, `description`, `duration`, `difficulty`, `default_people_amount`, `thumbnail`) VALUES
+(1, '2022-11-28 13:40:47', 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '20 min + 1 uur oventijd', 3, 10, '../Img/chai-latte-cake.jpg');
 
 --
 -- Indexes for dumped tables
