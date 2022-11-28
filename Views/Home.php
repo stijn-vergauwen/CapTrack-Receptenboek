@@ -40,9 +40,8 @@
                             </span>
                         </div>
                     </div>
-                    
             </div>
-        </header>
+    </header>
 
 <main class="page-content">
 

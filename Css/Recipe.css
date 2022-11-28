@@ -285,11 +285,16 @@
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 0px 10px 25px rgb(174, 174, 174);
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .grid-obj-styling {
     width: 100%;
     min-height: 18rem;
+    max-height: 18rem;
+    max-width: 30rem;
+    min-width: 10rem;
     object-fit: cover;
     display: block;
 }
@@ -299,6 +304,7 @@
 
 .recipe-grid-container {
     position: relative;
+
 }
 
 .recipe-grid-container:hover {
