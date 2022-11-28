@@ -1,6 +1,6 @@
 /* Recipe header */
 .recipe-header {
-    width: 60rem;
+    width: min(60rem, 100%);
 }
 
 .recipe-header img {
@@ -87,7 +87,7 @@
 /* ingredients section */
 .recipe-ingredients {
     padding: 2rem;
-    width: 60rem;
+    width: min(60rem, 100%);
     background-color: var(--secondary);
     box-shadow: 0px 10px 25px rgb(174, 174, 174);
     border: 3px solid var(--accent);
@@ -175,7 +175,7 @@
 
 .recipe-steps {
     padding: 2rem;
-    width: 60rem;
+    width: min(60rem, 100%);
     background-color: var(--secondary);
     box-shadow: 0px 10px 25px rgb(174, 174, 174);
     border: 3px solid var(--accent);
@@ -279,8 +279,8 @@
 .recipe-grid-wrap {
     background-color: var(--secondary);
     display: grid;
-    grid-template-columns: 30rem 30rem 30rem;
-    grid-template-rows: 20rem 20rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     padding: 2rem;
     border-radius: 2rem;
