@@ -1,19 +1,17 @@
 /* Recipe header */
 .recipe-header {
-    width: 60rem;
+    width: min(60rem, 100%);
 }
 
 .recipe-header img {
     width: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 10px 25px rgb(174, 174, 174);
 }
 
 .recipe-header .recipe-description {
     padding: 2rem;
     background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(174, 174, 174);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
@@ -29,11 +27,13 @@
     width: 7.5rem;
     background-color: var(--Main);
     border-radius: 2rem;
+
 }
 
 .difficulty-icon-div img {
     height: 1.5rem;
     width: 1.5rem;
+    box-shadow: none;
 }
 
 .time-icon-div {
@@ -43,7 +43,7 @@
     justify-content: start;
     gap: 0.5rem;
     height: 2rem;
-    width: 10rem;
+    max-width: 10rem;
     background-color: var(--Main);
     border-radius: 2rem;
     margin-top: 0.3rem;
@@ -52,6 +52,7 @@
 .time-icon-div img {
     height: 1.5rem;
     width: 1.5rem;
+    box-shadow: none;
     margin-left: 0.5rem;
 }
 
@@ -68,6 +69,7 @@
 
 .Required-time-text {
     font-size: 12px;
+    margin-right: 1rem;
 }
 
 .info-icon-wrapper {
@@ -83,16 +85,14 @@
 /* ingredients section */
 .recipe-ingredients {
     padding: 2rem;
-    width: 60rem;
+    width: min(60rem, 100%);
     background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(174, 174, 174);
-    border: 3px solid var(--accent);
     border-radius: 2rem;
 }
 
 .page-span-ingredients {
     width: 100%;
-    min-width: 100vw;
+    min-width: 100%;
     height: 30rem;
     max-height: 500px;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,rgba(255,255,255,1)), url(../Img/Ingredients.jpg);
@@ -132,18 +132,18 @@
 /* Bereidingswijze */
 .page-span-Bereidingswijze {
     width: 100%;
-    min-width: 100vw;
+    min-width: 100%;
     height: 30rem;
     max-height: 500px;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,
     rgba(255,255,255,1)), url(../Img/Husband-wife-pose-kitchen-preparing-tasty-dinner.jpg);
     background-repeat: no-repeat;
-    background-position: 0% 30%;
+    background-position: 0% 20%;
     background-size: cover;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    border-top: 5px solid var(--accent);
+    border-top: 5px solid var(--tertiary);
 }
 
 .page-span-Bereidingswijze h2 {
@@ -171,10 +171,8 @@
 
 .recipe-steps {
     padding: 2rem;
-    width: 60rem;
+    width: min(60rem, 100%);
     background-color: var(--secondary);
-    box-shadow: 0px 10px 25px rgb(174, 174, 174);
-    border: 3px solid var(--accent);
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -212,7 +210,7 @@
     display: inline; 
     width: 2rem;
     margin-right: 0.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .styling-ul {
@@ -220,13 +218,178 @@
     padding: 0;
 }
 
-/* Other recipes */
-.recipe-grid-wrap {
-    width: 79rem;
-    height: 42rem;
-    background-color: aqua;
-    display: grid;
-    grid-template-columns: 25rem 25rem 25rem;
-    grid-template-rows: 20rem 20rem;
-    gap: 2rem;
+/* review */
+
+.rating-text {
+    margin-top: 6rem;
 }
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: auto;
+    font-size: 45px;
+    overflow:hidden;
+}
+
+.rating a,
+.rating label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction: rtl;
+}
+.rating2 a {
+    float: none;
+}
+
+
+.underline-h2 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 2px solid var(--accent);
+    
+}
+
+.underline-h2 h2{
+    font-size: 3rem;
+    color: var(--tertiary);
+}
+
+/* Other recipes */
+
+.recipe-grid-container-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.recipe-grid-wrap {
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.grid-obj-styling {
+    width: 100%;
+    min-height: 18rem;
+    max-height: 18rem;
+    max-width: 30rem;
+    min-width: 10rem;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* recipe overlay */
+
+.recipe-grid-container {
+    position: relative;
+
+}
+
+.recipe-grid-container:hover {
+    transform: scale(1.05);
+    transition: .5s ease;
+}
+
+.recipe-grid-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000a6;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgb(174, 174, 174);
+}
+  
+.recipe-grid-container:hover .recipe-grid-overlay {
+    opacity: 1;
+}
+
+.recipe-overlay-text {
+    color: var(--Main);
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translate(-30%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+} 
+
+.info-overlay-div {
+    background-color: var(--secondary);
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.info-overlay-div .time-icon-div {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+    .recipe-grid-wrap{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .recipe-grid-wrap{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+

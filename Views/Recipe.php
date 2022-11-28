@@ -18,12 +18,30 @@
 </head>
 <body>
     <header class="page-header">
-        <p>Stijn's & Joost's Receptenboek</p>
-        <nav class="header-nav">
-            <a class="nav-link" href="/Views/home.php">Home</a>
-            <a class="nav-link" href="/Views/recipe.php">Recepten</a>
-        </nav>
+        <div class="header-div">
+            <img class="gif-header" src="../Img/Stein's&Joost'sKitchenV2.gif" alt="">
+                <a class="nav-link home-location-header" href="../Views/Home.php">
+                    <img class="home-icon" src="../Img/vecteezy_home-icon-sign-symbol-design_10161319_473.png" alt="">
+                    <p>home</p>
+                </a>
+
+                <div class="nav-link home-location-header recipe-location-header dropdown" href="../Views/Recipe.php">
+                    <img class="recipe-icon" src="../Img/recipe-book.png" alt="">  
+                    <p>Recipes</p>
+                    <div class="dropdown-content-recipe">
+                        <span>
+                            <a href="../Views/Recipe.php">Chai latte cake</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                            <a href="#">To be added!</a>
+                        </span>
+                    </div>
+                </div>
+                
+        </div>
     </header>
+
     <main class="page-content">
         <section class="recipe-header">
             <img src="../Img/chai-latte-cake.jpg" alt="Een lekkere latte cake">
@@ -49,14 +67,14 @@
                     </div>
                 </div>
             </div>
-            
         </section>
     
-        <section>
-            <div class="page-span-ingredients">
+        <section class="page-span-ingredients">
+            <div>
                 <h2>Ingrediënten</h2>
             </div>
         </section>
+
         <section class="recipe-ingredients">
             <div class="total-person-container">
                 <div class="container-button-wrap">
@@ -102,8 +120,9 @@
                 <li>0.1 eetlepel (plantaardige) melk</li>
             </ul>
         </section>
-        <section>
-            <div class="page-span-Bereidingswijze">
+
+        <section class="page-span-Bereidingswijze">
+            <div>
                 <h2>Bereiding</h2>
             </div>
         </section>
@@ -127,22 +146,176 @@
                 <div class="li-flex"><span class="li-styling-numeric">14.</span><li class="steps-li">Maak er ook eens een heerlijke chai tea latte of kurkuma latte bij.</li></div>
             </ol>
             <p class="recipe-steps-p">Eet smakelijk!</p>
+
+            <!-- review -->
+            <p class="rating-text">Review recipe!</p>
+            <div class="rating rating2">
+                <a href="#5" title="Give 5 stars">★</a>
+                <a href="#4" title="Give 4 stars">★</a>
+                <a href="#3" title="Give 3 stars">★</a>
+                <a href="#2" title="Give 2 stars">★</a>
+                <a href="#1" title="Give 1 star">★</a>
+            </div>
+
         </section>
+
+        <section class="underline-h2">
+            
+
+            <h2>bekijk ook!</h2>
+            <span class=""></span>
+        </section>
+
 
         <section class="recipe-grid-wrap">
-            <img class="grid-pos-1" src="../Img/chai-latte-cake.jpg" alt="">
-            <img class="grid-pos-2" src="../Img/Recept-placeholder1.jpg" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+    
+            <!-- Recipe 1 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/chai-latte-cake.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">20 min + 1 uur oventijd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">Chai latte cake</p>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/stamppot-met-spruitjes.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Met dit lekkere recept voor spruitjesstamppot, spek en appel lust iedereen spruitjes.</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">30 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">spruitjesstamppot</p>
+            </div>
+
+            <!-- Recipe 3 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/wraps-met-kip_b-1.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Lekkere tortilla wraps gevuld met Mexicaans gekruide kip en paprika, snel en makkelijk klaar!</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">25 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">Wraps met kip</p>
+            </div>
+
+            <!-- Recipe 4 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/lasagne-bolognese.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Het traditionele recept voor lasagne bolognese met een kruidige gehaktsaus en een romige bechamelsaus.</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">  1 uur + 45 min oventijd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">lasagne bolognese</p>
+            </div>
+
+            <!-- Recipe 5 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/placeholder2.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Dit snelle basisrecept voor verse tomatensoep staat binnen 20 minuten op tafel en lukt gegarandeerd.</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">20 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">verse tomatensoep</p>
+            </div>
+
+            <!-- Recipe 6 -->
+            <div class="recipe-grid-container-flex" onclick="location.href='../Views/Recipe.php';">
+                <div class="recipe-grid-container">
+                    <img class="grid-obj-styling" src="../Img/placeholder6.jpg" alt="">
+                    <div class="recipe-grid-overlay">
+                        <div class="recipe-overlay-text">Snel en makkelijk een heerlijk pastagerecht op tafel met zalm en spinazie in een romige saus, echt een perfecte combinatie!</div>
+                        <div class="info-overlay-div">
+                            <p>moeilijkheid:</p>
+                            <div class="difficulty-icon-div">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                            </div>
+                            <p>tijd:</p>
+                            <div class="time-icon-div" >
+                                <img src="../Img/clock-icon.png" alt="clock icon">
+                                <p class="Required-time-text">30 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="recipe-grid-name">Pasta met zalm en spinazie</p>
+            </div>
+
         </section>
 
-
     </main>
-
-
-
 
 
 <footer class="page-footer">
