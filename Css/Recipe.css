@@ -222,6 +222,10 @@
     font-size: 2rem;
 }
 
+.styling-ul li p {
+    display: inline;
+}
+
 .styling-ul {
     list-style-type: none;
     padding: 0;

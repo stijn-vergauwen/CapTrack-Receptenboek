@@ -1,6 +1,4 @@
 let personAmountText = document.getElementById('personAmount')
-let addPersonAmountbtn = document.getElementById('addPersonAmount')
-let reducePersonAmountbtn = document.getElementById('reducePersonAmount')
 let personCounter = document.querySelector('.total-person-container')
 
 let ingredientAmount = document.querySelectorAll('.ingredient-amount')
@@ -14,10 +12,6 @@ function addPersonAmount() {
     console.log(personAmount)
     personAmount++;
     personAmountText.innerText = personAmount
-
-    ingredientAmount.forEach(element => {
-        element =+ element;
-    });
 
 }
 
@@ -34,8 +28,6 @@ function reducePersonAmount() {
 
 }
 
-// addPersonAmountbtn.addEventListener('click', addPersonAmount())
-// reducePersonAmountbtn.addEventListener('click', reducePersonAmount())
 
 personCounter.addEventListener('click', e => {
     let target = e.target
