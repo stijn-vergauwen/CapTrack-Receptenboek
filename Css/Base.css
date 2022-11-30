@@ -69,7 +69,7 @@ section {
     width: 40px;
     height: 30px;
     cursor: pointer;
-    background: transparent;
+    background: var(--accent);
     border: 1px solid var(--accent);
     outline: none;
     transition: 1s ease-in-out;
@@ -88,7 +88,11 @@ svg {
 
 .btn-red:hover {
     transition: 1s ease-in-out;
-    background: var(--accent);
+    background: var(--Main);
+}
+
+.btn-red:hover span{
+        color: var(--accent);
 }
 
 .btn-red:hover svg {
