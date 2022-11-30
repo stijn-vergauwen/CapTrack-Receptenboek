@@ -1,3 +1,6 @@
+<?php
+require_once("../Php/Main.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,30 +20,8 @@
     <title>Receptenboek</title>
 </head>
 <body>
-    <header class="page-header">
-        <div class="header-div">
-            <img class="gif-header" src="../Img/Stein's&Joost'sKitchenV2.gif" alt="">
-                <a class="nav-link home-location-header" href="../Views/Home.php">
-                    <img class="home-icon" src="../Img/vecteezy_home-icon-sign-symbol-design_10161319_473.png" alt="">
-                    <p>home</p>
-                </a>
-
-                <div class="nav-link home-location-header recipe-location-header dropdown" href="../Views/Recipe.php">
-                    <img class="recipe-icon" src="../Img/recipe-book.png" alt="">  
-                    <p>Recipes</p>
-                    <div class="dropdown-content-recipe">
-                        <span>
-                            <a href="../Views/Recipe.php">Chai latte cake</a>
-                            <a href="#">To be added!</a>
-                            <a href="#">To be added!</a>
-                            <a href="#">To be added!</a>
-                            <a href="#">To be added!</a>
-                        </span>
-                    </div>
-                </div>
-                
-        </div>
-    </header>
+    
+    <?= $componentLoader->loadHeader() ?>
 
     <main class="page-content">
         <section class="recipe-header">
