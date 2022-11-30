@@ -1,12 +1,14 @@
 <?php
 require_once("Database.php");
+require_once("ComponentLoader.php");
 
+// setup classes
+$pathToComponentsFolder = "../Views/Components/";
 
 $database = new Database();
 $database->createConnection("receptenboek", "root", "");
 
-$testRecipe = $database->getRecipe(1);
-// print_r($testRecipe["title"]);
+$componentLoader = new ComponentLoader($pathToComponentsFolder);
 
 
 
