@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="../Js/Ingrediënts.js" defer></script>
     <title>Receptenboek</title>
 </head>
 <body>
@@ -53,16 +54,16 @@
                     <div class="difficulty-wrapper" >
                         <p>tijd</p>
                         <div class="time-icon-div" >
-                            <img src="../Img/clock-icon.png" alt="clock icon">
-                            <p class="Required-time-text">20 min + 1 uur oventijd</p>
+                            <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                            <p class="Required-time-text">1 uur 20 min</p>
                         </div>
                     </div>
                     <div class="difficulty-wrapper">
                         <p>Moeilijkheid</p>
                         <div class="difficulty-icon-div">
-                            <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                            <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                            <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                            <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                            <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
                         </div>
                     </div>
                 </div>
@@ -76,10 +77,12 @@
         </section>
 
         <section class="recipe-ingredients">
+
+
             <div class="total-person-container">
                 <div class="container-button-wrap">
                     <div class="center-button-wrap">
-                      <button class="btn-red">
+                      <button class="btn-red" id="addPersonAmount">
                         <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
                           <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
                           <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
@@ -89,11 +92,12 @@
                     </div>
                 </div>
 
+                <p id="personAmount">5</p>
                 <p>Personen</p>
 
                 <div class="container-button-wrap">
                     <div class="center-button-wrap">
-                      <button class="btn-red">
+                      <button class="btn-red" id="reducePersonAmount">
                         <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
                           <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
                           <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
@@ -105,19 +109,19 @@
             </div>
 
             <ul class="styling-ul">
-                <li>0.3 eetlepels chai kruiden</li>
-                <li>15 ml neutrale olijfolie</li>
-                <li>28 gr witte basterdsuiker</li>
-                <li>25 gr Griekse yoghurt (plantaardig)</li>
-                <li>32 gr zelfrijzend bakmeel</li>
-                <li>0.1 theelepels vanille extract</li>
-                <li>0.2 eieren</li>
-                <li>snufje zout</li>
-                <li>6 ml (plantaardige) melk</li>
-                <li>0.1 zakje zwarte thee</li>
-                <li>0.1 kneepje honing</li>
-                <li>16 gr poedersuiker</li>
-                <li>0.1 eetlepel (plantaardige) melk</li>
+                <li><p class="ingredient-amount">0.3</p><p> eetlepels chai kruiden</p></li>
+                <li><p class="ingredient-amount">15 ml</p><p> neutrale olijfolie</p></li>
+                <li><p class="ingredient-amount">28 gr</p><p> witte basterdsuiker</p></li>
+                <li><p class="ingredient-amount">25 gr</p><p> Griekse yoghurt (plantaardig)</p></li>
+                <li><p class="ingredient-amount">32 gr</p><p> zelfrijzend bakmeel</p></li>
+                <li><p class="ingredient-amount">0.1</p><p> theelepels vanille extract</p></li>
+                <li><p class="ingredient-amount">0.2</p><p> eieren</p></li>
+                <li><p>snufje zout</p></li>
+                <li><p class="ingredient-amount">6 ml</p><p> (plantaardige) melk</p></li>
+                <li><p class="ingredient-amount">0.1</p><p> zakje zwarte thee</p></li>
+                <li><p class="ingredient-amount">0.1</p><p> kneepje honing</p></li>
+                <li><p class="ingredient-amount">16 gr</p><p> poedersuiker</p></li>
+                <li><p class="ingredient-amount">0.1</p><p> eetlepel (plantaardige) melk</p></li>
             </ul>
         </section>
 
@@ -176,16 +180,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">20 min + 1 uur oventijd</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">1 uur 20 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,16 +209,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Met dit lekkere recept voor spruitjesstamppot, spek en appel lust iedereen spruitjes.</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">30 min</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">30 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -224,16 +238,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Lekkere tortilla wraps gevuld met Mexicaans gekruide kip en paprika, snel en makkelijk klaar!</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">25 min</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">25 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -248,16 +267,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Het traditionele recept voor lasagne bolognese met een kruidige gehaktsaus en een romige bechamelsaus.</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">  1 uur + 45 min oventijd</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">1 uur 25 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -272,16 +296,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Dit snelle basisrecept voor verse tomatensoep staat binnen 20 minuten op tafel en lukt gegarandeerd.</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">20 min</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">20 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -296,16 +325,21 @@
                     <div class="recipe-grid-overlay">
                         <div class="recipe-overlay-text">Snel en makkelijk een heerlijk pastagerecht op tafel met zalm en spinazie in een romige saus, echt een perfecte combinatie!</div>
                         <div class="info-overlay-div">
-                            <p>moeilijkheid:</p>
-                            <div class="difficulty-icon-div">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
-                                <img src="../Img/Baking-Icon.png" alt="Baking icon">
+                            <div class="flex-icons">
+                                <p>moeilijkheid:</p>
+                                <div class="difficulty-icon-div">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
+                                </div>
                             </div>
-                            <p>tijd:</p>
-                            <div class="time-icon-div" >
-                                <img src="../Img/clock-icon.png" alt="clock icon">
-                                <p class="Required-time-text">30 min</p>
+
+                            <div class="flex-icons">
+                                <p>tijd:</p>
+                                <div class="time-icon-div" >
+                                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                                    <p class="Required-time-text">30 min</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -316,6 +350,8 @@
         </section>
 
     </main>
+
+
 
 
 <footer class="page-footer">
