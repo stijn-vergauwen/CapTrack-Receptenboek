@@ -44,6 +44,10 @@ class ComponentLoader {
     // $content = $this->navLinkContentArray
   }
 
+  function generateRecipeIngredients() : string {
+    $ingredientsList = "";
+  }
+
   // Utility
 
   function getComponentFromFile(string $fileName) : string {
