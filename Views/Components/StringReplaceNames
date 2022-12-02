@@ -1,0 +1,8 @@
+{recipeDescription}             --- The description of the a recipe. ---
+{difficultySelect}              --- Consists of a component that display and selects the difficulty of a recipe. ---
+{recipeThumbnail}               --- Selects the Thumbnail image of a recipe ---
+{requiredRecipeTime}            --- Selects the required time to prepare a single recipe ---
+{recipeTitle}                   --- Selects the name or title of a single recipe ---
+{recipePage}                    --- Selects the page of the displayed recipe ---
+
+{requiredPhpDifficultySelect}   --- Required Php to diplay the correct difficulty for a recipe ---
