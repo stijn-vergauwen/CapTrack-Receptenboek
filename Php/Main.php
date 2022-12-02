@@ -8,15 +8,15 @@ $pathToComponentsFolder = "../Views/Components/";
 $database = new Database();
 $database->createConnection("receptenboek", "root", "");
 
-$componentLoader = new ComponentLoader($pathToComponentsFolder);
+$componentLoader = new ComponentLoader($pathToComponentsFolder, $database);
 
-$testIngredientsResult = $database->getIngredientsFromRecipe(1);
+// $testIngredientsResult = $database->getIngredientsFromRecipe(1);
 
 // print_r($testIngredientsResult["title"]);
 
-foreach($testIngredientsResult as $ingredient) { 
-    print_r($ingredient["amount"] . " " . $ingredient["amount_type"] . " " . $ingredient["title"] . "<br>");
-}
+// foreach($testIngredientsResult as $ingredient) { 
+//     print_r($ingredient["amount"] . " " . $ingredient["amount_type"] . " " . $ingredient["title"] . "<br>");
+// }
 
 // DB Tables structuur:
 // 

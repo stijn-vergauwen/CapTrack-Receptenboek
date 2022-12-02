@@ -2,25 +2,25 @@
 
 class ComponentLoader {
   private $pathToComponents;
-//   private $navLinkContentArray = array("Home", "Cool Page!", "About", "Contact");
+  private $database;
 
-  public function __construct(string $pathToComponents) {
+  public function __construct(string $pathToComponents, Database $database) {
     $this->pathToComponents = $pathToComponents;
+    $this->database = $database;
   }
 
   // Loading components to display in html
 
   public function loadHeader() : string {
     return $this->setComponentVariables(
-      $this->getComponentFromFile("header.html"),
-      array("{recipe1}", "{recipe2}", "{recipe3}", "{navLinks}"),
-      // array("Test Title!", $this->generateNavContent())
-      array("Chai latte cake", "Iets van lasagne", "Een ander recept", "")
+      $this->getComponentFromFile("Header.html"),
+      array("{recipes}"),
+      array($this->generateNavContent())
     );
   }
 
   public function loadFooter() : string {
-
+    return $this->getComponentFromFile("Footer.html");
   }
 
   public function loadRecipeContent() : string {
@@ -34,18 +34,26 @@ class ComponentLoader {
   // Generating content of sub-components
 
   function generateNavContent() : string {
-    // - get navLinkContent
-    // - loop through content array, for each:
-    // - get component file
-    // - replace the values
-    // - add to result
-    // - return result
+    $navContent = "";
 
-    // $content = $this->navLinkContentArray
+    $recipes = $this->database->getAllRecipes();
+    foreach($recipes as $recipe) {
+      $navContent .= $this->setComponentVariables(
+        $this->getComponentFromFile("RecipeLink.html"),
+        array("{link}", "{text}"),
+        array("../Views/Recipe.php?id=" . $recipe["id"], $recipe["title"])
+      );
+    }
+
+    return $navContent;
   }
 
   function generateRecipeIngredients() : string {
     $ingredientsList = "";
+    // $recipes = $database->getAllRecipes();
+    // foreach($recipes as $recipe) {
+    //   print_r($recipe);
+    // }
   }
 
   // Utility
