@@ -6,3 +6,6 @@
 {recipePage}                    --- Selects the page of the displayed recipe ---
 
 {requiredPhpDifficultySelect}   --- Required Php to diplay the correct difficulty for a recipe ---
+
+{ingredientAmount}              --- The required ingredient amount ---
+{ingredientAmountType}          --- The required ingredient type like ml, gr ---

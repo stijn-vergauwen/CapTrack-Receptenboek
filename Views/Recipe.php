@@ -59,8 +59,22 @@ require_once("../Php/Main.php");
 
         <section class="recipe-ingredients">
 
-
             <div class="total-person-container">
+                <div class="container-button-wrap">
+                    <div class="center-button-wrap">
+                      <button class="btn-red" id="reducePersonAmount">
+                        <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
+                          <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
+                          <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
+                        </svg>
+                        <span>-</span>
+                      </button>
+                    </div>
+                </div>
+
+                <p id="personAmount">10</p>
+                <p>Personen</p>
+
                 <div class="container-button-wrap">
                     <div class="center-button-wrap">
                       <button class="btn-red" id="addPersonAmount">
@@ -72,36 +86,21 @@ require_once("../Php/Main.php");
                       </button>
                     </div>
                 </div>
-
-                <p id="personAmount">5</p>
-                <p>Personen</p>
-
-                <div class="container-button-wrap">
-                    <div class="center-button-wrap">
-                      <button class="btn-red" id="reducePersonAmount">
-                        <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
-                          <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
-                          <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
-                        </svg>
-                        <span>-</span>
-                      </button>
-                    </div>
-                  </div>
             </div>
 
             <ul class="styling-ul">
                 <li><p class="ingredient-amount">0.3</p><p> eetlepels chai kruiden</p></li>
-                <li><p class="ingredient-amount">15 ml</p><p> neutrale olijfolie</p></li>
-                <li><p class="ingredient-amount">28 gr</p><p> witte basterdsuiker</p></li>
-                <li><p class="ingredient-amount">25 gr</p><p> Griekse yoghurt (plantaardig)</p></li>
-                <li><p class="ingredient-amount">32 gr</p><p> zelfrijzend bakmeel</p></li>
+                <li><p class="ingredient-amount">15</p><p> neutrale olijfolie</p></li>
+                <li><p class="ingredient-amount">28</p><p> witte basterdsuiker</p></li>
+                <li><p class="ingredient-amount">25</p><p> Griekse yoghurt (plantaardig)</p></li>
+                <li><p class="ingredient-amount">32</p><p> zelfrijzend bakmeel</p></li>
                 <li><p class="ingredient-amount">0.1</p><p> theelepels vanille extract</p></li>
                 <li><p class="ingredient-amount">0.2</p><p> eieren</p></li>
                 <li><p>snufje zout</p></li>
-                <li><p class="ingredient-amount">6 ml</p><p> (plantaardige) melk</p></li>
+                <li><p class="ingredient-amount">6</p><p> (plantaardige) melk</p></li>
                 <li><p class="ingredient-amount">0.1</p><p> zakje zwarte thee</p></li>
                 <li><p class="ingredient-amount">0.1</p><p> kneepje honing</p></li>
-                <li><p class="ingredient-amount">16 gr</p><p> poedersuiker</p></li>
+                <li><p class="ingredient-amount">16</p><p> poedersuiker</p></li>
                 <li><p class="ingredient-amount">0.1</p><p> eetlepel (plantaardige) melk</p></li>
             </ul>
         </section>
