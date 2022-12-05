@@ -127,11 +127,30 @@ class ComponentLoader {
       $ingredientsList .= $this->setComponentVariables(
         $this->getComponentFromFile("IngredientItem.html"),
         array("{ingredientTitle}", "{ingredientAmountType}", "{ingredientAmount}"),
-        array($ingredient["title"], $ingredient["amount_type"], $ingredient["amount"])
+        array($ingredient["title"], $this->checkIngredientAmountType((string)$ingredient["amount_type"]), $ingredient["amount"])
       );
     }
 
     return $ingredientsList;
+  }
+
+  function checkIngredientAmountType(string $amountType) : string {
+    $link = "";
+
+    if($amountType == "snufje") {
+      $link = "https://www.elle.com/nl/eten/eten-drinken/a25008051/hoeveel-snufje-zout/";
+
+    } else if($amountType == "kneepje") {
+      $link = "https://www.youtube.com/watch?v=p7YXXieghto";
+
+    }
+
+    if($link == "") {
+      return $amountType;
+
+    } else {
+      return "<a class='dumb-ingredient-type' href='$link'>$amountType</a>";
+    }
   }
 
   function generateRecipeSteps(int $recipeId) : string {
