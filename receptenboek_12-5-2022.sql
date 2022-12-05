@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 02:44 PM
+-- Generation Time: Dec 05, 2022 at 10:52 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -29,28 +29,26 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `ingredients` (
   `id` int(11) NOT NULL,
-  `recipe_id` int(11) NOT NULL,
-  `title` varchar(40) NOT NULL,
-  `amount` float NOT NULL COMMENT 'the amount for this recipe''s default amount of people'
+  `title` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ingredients`
 --
 
-INSERT INTO `ingredients` (`id`, `recipe_id`, `title`, `amount`) VALUES
-(1, 1, 'eetlepels chai kruiden', 3),
-(2, 1, 'ml neutrale olijfolie', 150),
-(3, 1, 'gr witte basterdsuiker', 280),
-(4, 1, 'gr Griekse yoghurt (plantaardig)', 250),
-(5, 1, 'gr zelfrijzend bakmeel', 320),
-(6, 1, 'theelepels vanille extract', 1),
-(7, 1, 'eieren', 2),
-(8, 1, 'ml (plantaardige) melk', 60),
-(9, 1, 'zakje zwarte thee', 1),
-(10, 1, 'kneepje honing', 1),
-(11, 1, 'gr poedersuiker', 160),
-(12, 1, 'eetlepel (plantaardige) melk', 1);
+INSERT INTO `ingredients` (`id`, `title`) VALUES
+(1, 'chai kruiden'),
+(2, 'olijfolie'),
+(3, 'witte basterdsuiker'),
+(4, 'Griekse yoghurt (plantaardig)'),
+(5, 'zelfrijzend bakmeel'),
+(6, 'vanille extract'),
+(7, 'eieren'),
+(8, '(plantaardige) melk'),
+(9, 'zakje zwarte thee'),
+(10, 'honing'),
+(11, 'poedersuiker'),
+(12, '(plantaardige) melk');
 
 -- --------------------------------------------------------
 
@@ -107,7 +105,38 @@ CREATE TABLE `recipes` (
 --
 
 INSERT INTO `recipes` (`id`, `added`, `title`, `description`, `duration`, `difficulty`, `default_people_amount`, `thumbnail`) VALUES
-(1, '2022-11-28 13:40:47', 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '20 min + 1 uur oventijd', 3, 10, '../Img/chai-latte-cake.jpg');
+(1, '2022-11-28 13:40:47', 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '1 uur 20 min', 3, 10, '../Img/chai-latte-cake.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipes_ingredients`
+--
+
+CREATE TABLE `recipes_ingredients` (
+  `id` int(11) NOT NULL,
+  `recipe_id` int(11) NOT NULL,
+  `ingredient_id` int(11) NOT NULL,
+  `amount` float DEFAULT NULL COMMENT 'ingredient amount per person',
+  `amount_type` varchar(15) DEFAULT NULL COMMENT 'measurement type for amount'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `recipes_ingredients`
+--
+
+INSERT INTO `recipes_ingredients` (`id`, `recipe_id`, `ingredient_id`, `amount`, `amount_type`) VALUES
+(1, 1, 1, 0.3, 'eetlepels'),
+(2, 1, 2, 15, 'ml'),
+(3, 1, 3, 28, 'gr'),
+(4, 1, 4, 25, 'gr'),
+(5, 1, 5, 32, 'gr'),
+(6, 1, 6, 0.1, 'theelepels'),
+(7, 1, 7, 0.2, NULL),
+(8, 1, 8, 6, 'ml'),
+(9, 1, 9, 0.1, NULL),
+(10, 1, 10, 0.1, 'kneepje'),
+(11, 1, 11, 16, 'gr');
 
 --
 -- Indexes for dumped tables
@@ -132,6 +161,12 @@ ALTER TABLE `recipes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `recipes_ingredients`
+--
+ALTER TABLE `recipes_ingredients`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -152,6 +187,12 @@ ALTER TABLE `preparation_steps`
 --
 ALTER TABLE `recipes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `recipes_ingredients`
+--
+ALTER TABLE `recipes_ingredients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
