@@ -9,11 +9,16 @@ let previousPresonAmount = 1
 
 ingredientAmount.forEach(changeAmount);
 
+function ifAmountISNULL(item) {
+    return +item.innerText == 0
+}   
+
+
 // console.log(personCounter)
 
 function addPersonAmount() {
 
-    console.log(personAmount)
+
     previousPresonAmount = personAmount
 
     personAmount++;
@@ -24,8 +29,7 @@ function addPersonAmount() {
 }
 
 function changeAmount (item) {
-
-    console.log(+item.innerText)
+    if(ifAmountISNULL(item)) return
 
     let singleAmount = +item.innerText / previousPresonAmount
 
@@ -33,14 +37,17 @@ function changeAmount (item) {
         personAmount = 1
     }
 
+    if(singleAmount == 0) {
+        singleAmount = ''
+    }
+
     let newAmount = singleAmount * personAmount
     item.innerText = Math.round(newAmount*100)/100
-
+    
 }
 
 function reducePersonAmount() {
 
-    console.log(personAmount)
     previousPresonAmount = personAmount
 
     personAmount--;
@@ -57,8 +64,6 @@ function reducePersonAmount() {
         personAmountText.innerText = personAmount 
 
     }
-
-
 
 }
 

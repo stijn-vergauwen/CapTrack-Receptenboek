@@ -78,14 +78,17 @@ class ComponentLoader {
           
     }
 
-  if ($latestRecipes < 6) {
-    for ($i = 0; $i < 6; $i++) {
+    $missingRecipeCount = 6 - count($latestRecipes);
+    
+      for ($i = 0; $i < $missingRecipeCount; $i++) {
 
-      
-    }
-  }
+        $loadRecipeGrid .= $this->getComponentFromFile("RecipePlaceholder.html");
+      };
+
+
 
   return $loadRecipeGrid;
+
 }
 
   // Generating content of sub-components
