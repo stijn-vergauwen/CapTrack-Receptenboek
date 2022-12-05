@@ -25,7 +25,6 @@ class ComponentLoader {
 
   public function loadRecipeContent(int $recipeId) : string {
     $recipeData = $this->database->getRecipe($recipeId);
-    // print_r($recipeData);
     return $this->setComponentVariables(
       $this->getComponentFromFile("RecipeContent.html"),
       array(
@@ -52,39 +51,41 @@ class ComponentLoader {
   }
 
   public function loadRecipeGrid() : string {
-    // loop zodat je 6 items krijgt vor de recipegrid
-    // maak een recipe id variable aan
-    // haal de recipeid op uit de data base die het laast zijn aan gemaakt
-    // vergelijk het recipeid uit de database met het recipeid variable
-    // maak een array met alles wat vervangen moet worden
-    // plaats de html in het grid element
     $latestRecipes = $this->database->getLatestRecipes();
+    $loadRecipeGrid = '';
 
-  foreach($latestRecipes as $singleRecipe) {
-    
-    $loadRecipeGrid = $this->setComponentVariables(
-      $this->getComponentFromFile("RecipeGridItem.html"),
-      array("{recipePage}", 
-            "{recipeTitle}", 
-            "{recipeThumbnail}", 
-            "{recipeDescription}", 
-            "{difficultySelect}", 
-            "{requiredRecipeTime}"
-      ), 
-      array("../Views/Recipe.php?id=" . $singleRecipe["id"], 
-            $singleRecipe["title"], 
-            $singleRecipe["thumbnail"], 
-            $singleRecipe["description"], 
-            $singleRecipe["difficulty"], 
-            $singleRecipe["duration"]
-      )
-    );
+    foreach($latestRecipes as $singleRecipe) {
+      
+      $loadRecipeGrid .= $this->setComponentVariables(
+        $this->getComponentFromFile("RecipeGridItem.html"),
+        array(
+          "{recipePage}", 
+          "{recipeTitle}", 
+          "{recipeThumbnail}", 
+          "{recipeDescription}", 
+          "{difficultySelect}", 
+          "{requiredRecipeTime}"
+        ), 
+        array(
+          "../Views/Recipe.php?id=" . $singleRecipe["id"], 
+          $singleRecipe["title"], 
+          $singleRecipe["thumbnail"], 
+          $singleRecipe["description"], 
+          $this->generateRecipeDifficulty((int)$singleRecipe["difficulty"]), 
+          $singleRecipe["duration"]
+        )
+      );
+          
+    }
 
-        
+  if ($latestRecipes < 6) {
+    for ($i = 0; $i < 6; $i++) {
+
+      
+    }
   }
 
   return $loadRecipeGrid;
-
 }
 
   // Generating content of sub-components
