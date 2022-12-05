@@ -72,7 +72,7 @@ require_once("../Php/Main.php");
                     </div>
                 </div>
 
-                <p id="personAmount">10</p>
+                <p id="personAmount">500</p>
                 <p>Personen</p>
 
                 <div class="container-button-wrap">

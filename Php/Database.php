@@ -28,4 +28,15 @@ class Database {
     }
 
 
+    public function getLatestRecipes() : array {
+        $query = $this->connection->query(
+            "SELECT * FROM `recipes`
+            ORDER BY added DESC
+            LIMIT 6"
+        );
+        return $query->fetchall();
+
+
+    }
+
 }
