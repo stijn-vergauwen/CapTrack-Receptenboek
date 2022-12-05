@@ -15,7 +15,7 @@ class ComponentLoader {
     return $this->setComponentVariables(
       $this->getComponentFromFile("Header.html"),
       array("{recipes}"),
-      array($this->generateNavContent())
+      array($this->generateHeaderNavContent())
     );
   }
 
@@ -23,8 +23,32 @@ class ComponentLoader {
     return $this->getComponentFromFile("Footer.html");
   }
 
-  public function loadRecipeContent() : string {
-
+  public function loadRecipeContent(int $recipeId) : string {
+    $recipeData = $this->database->getRecipe($recipeId);
+    // print_r($recipeData);
+    return $this->setComponentVariables(
+      $this->getComponentFromFile("RecipeContent.html"),
+      array(
+        "{recipeImageLink}",
+        "{recipeTitle}",
+        "{recipeDescription}",
+        "{requiredRecipeTime}",
+        "{difficultySelect}",
+        "{defaultPeopleAmount}",
+        "{recipeIngredients}",
+        "{recipeSteps}"
+      ),
+      array(
+        $recipeData["thumbnail"],
+        $recipeData["title"],
+        $recipeData["description"],
+        $recipeData["duration"],
+        $this->generateRecipeDifficulty((int)$recipeData["difficulty"]),
+        $recipeData["default_people_amount"],
+        $this->generateRecipeIngredients($recipeId),
+        $this->generateRecipeSteps($recipeId)
+      )
+    );
   }
 
   public function loadRecipeGrid() : string {
@@ -65,7 +89,7 @@ class ComponentLoader {
 
   // Generating content of sub-components
 
-  function generateNavContent() : string {
+  function generateHeaderNavContent() : string {
     $navContent = "";
 
     $recipes = $this->database->getAllRecipes();
@@ -80,12 +104,49 @@ class ComponentLoader {
     return $navContent;
   }
 
-  function generateRecipeIngredients() : string {
+  function generateRecipeDifficulty(int $difficulty) : string {
+    $difficultyDisplay = "";
+
+    for($i = 0; $i < 3; $i++) {
+      $className = $i < $difficulty ? "" : "class='difficulty-icon-seethrough'";
+      $difficultyDisplay .= $this->setComponentVariables(
+        $this->getComponentFromFile("DifficultySelect.html"),
+        array("{class}"),
+        array($className)
+      );
+    }
+
+    return $difficultyDisplay;
+  }
+
+  function generateRecipeIngredients(int $recipeId) : string {
     $ingredientsList = "";
-    // $recipes = $database->getAllRecipes();
-    // foreach($recipes as $recipe) {
-    //   print_r($recipe);
-    // }
+    
+    $ingredients = $this->database->getIngredientsFromRecipe($recipeId);
+    foreach($ingredients as $ingredient) {
+      $ingredientsList .= $this->setComponentVariables(
+        $this->getComponentFromFile("IngredientItem.html"),
+        array("{ingredientTitle}", "{ingredientAmountType}", "{ingredientAmount}"),
+        array($ingredient["title"], $ingredient["amount_type"], $ingredient["amount"])
+      );
+    }
+
+    return $ingredientsList;
+  }
+
+  function generateRecipeSteps(int $recipeId) : string {
+    $stepsList = "";
+
+    $steps = $this->database->getPreparationStepsFromRecipe($recipeId);
+    foreach($steps as $step) {
+      $stepsList .= $this->setComponentVariables(
+        $this->getComponentFromFile("RecipeStepItem.html"),
+        array("{listOrder}", "{body}"),
+        array($step["list_order"], $step["body"])
+      );
+    }
+
+    return $stepsList;
   }
 
   // Utility
