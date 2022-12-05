@@ -1,5 +1,5 @@
 <section class="recipe-header">
-    <img src="../Img/chai-latte-cake.jpg" alt="Een lekkere latte cake">
+    <img src="{recipeImageLink}" alt="Een lekkere latte cake">
     <div class="recipe-description">
         <h1>{recipeTitle}</h1>
         <p>{recipeDescription}</p>
@@ -16,9 +16,6 @@
                 <p>Moeilijkheid</p>
                 <div class="difficulty-icon-div">
                     {difficultySelect}
-                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
-                    <img src="../Img/Baking-Icon1.png" alt="Baking icon">
-                    <img class="difficulty-icon-seethrough" src="../Img/Baking-Icon1.png" alt="Baking icon">
                 </div>
             </div>
         </div>
@@ -33,7 +30,6 @@
 
 <section class="recipe-ingredients">
 
-
     <div class="total-person-container">
         <div class="container-button-wrap">
             <div class="center-button-wrap">
@@ -47,7 +43,7 @@
             </div>
         </div>
 
-        <p id="personAmount">5</p>
+        <p id="personAmount">{defaultPeopleAmount}</p>
         <p>Personen</p>
 
         <div class="container-button-wrap">
@@ -64,19 +60,9 @@
     </div>
 
     <ul class="styling-ul">
-        <li><p class="ingredient-amount">0.3</p><p> eetlepels chai kruiden</p></li>
-        <li><p class="ingredient-amount">15 ml</p><p> neutrale olijfolie</p></li>
-        <li><p class="ingredient-amount">28 gr</p><p> witte basterdsuiker</p></li>
-        <li><p class="ingredient-amount">25 gr</p><p> Griekse yoghurt (plantaardig)</p></li>
-        <li><p class="ingredient-amount">32 gr</p><p> zelfrijzend bakmeel</p></li>
-        <li><p class="ingredient-amount">0.1</p><p> theelepels vanille extract</p></li>
-        <li><p class="ingredient-amount">0.2</p><p> eieren</p></li>
-        <li><p>snufje zout</p></li>
-        <li><p class="ingredient-amount">6 ml</p><p> (plantaardige) melk</p></li>
-        <li><p class="ingredient-amount">0.1</p><p> zakje zwarte thee</p></li>
-        <li><p class="ingredient-amount">0.1</p><p> kneepje honing</p></li>
-        <li><p class="ingredient-amount">16 gr</p><p> poedersuiker</p></li>
-        <li><p class="ingredient-amount">0.1</p><p> eetlepel (plantaardige) melk</p></li>
+
+        {recipeIngredients}
+        
     </ul>
 </section>
 
@@ -89,20 +75,9 @@
 <section class="recipe-steps">
 
     <ol class="recipe-steps-ol">
-        <div class="li-flex"><span class="li-styling-numeric">1.</span><li class="steps-li">Start met het maken van de chai kruidenmix of gebruik een kant-en-klare versie.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">2.</span><li class="steps-li">Verwarm de oven voor op 170° graden.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">3.</span><li class="steps-li">Doe de (plantaardige) melk in een pannetje en voeg de chai kruidenmix, de vanille extract en wat honing toe.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">4.</span><li class="steps-li">Roer dit goed door met een garde. Verhit dit op het vuur totdat deze warm is, laat hem niet koken. Zodra de melk warm is, voeg je het theezakje toe en laat circa 5 minuten trekken.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">5.</span><li class="steps-li">Ga ondertussen verder met de cake: Mix de olie, eieren, (plantaardige) yoghurt, suiker en het snufje zout door elkaar. Voeg 60 ml van het chai latte mengsel toe en mix nog een keer goed door.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">6.</span><li class="steps-li">Zeef het bakmeel en mix totdat het een glad mengsel is.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">7.</span><li class="steps-li">Vet de bakvorm goed in met een beetje olie en/of bekleed met bakpapier.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">8.</span><li class="steps-li">Giet het beslag in de vorm en zet ongeveer 60 minuten in de oven.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">9.</span><li class="steps-li">Maak ondertussen de glazuurlaag. Neem 1 eetlepel/de rest van het chaimengsel en voeg daar al roerend met een garde beetje bij beetje de poedersuiker aan toe totdat je een dikke glazuur krijgt. Het moet nog net ‘lopen’ als je het met een lepel eruit schept.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">10.</span><li class="steps-li">Controleer met een sateprikker of de cake gaar is. Laat de cake daarna afkoelen en haal uit de vorm.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">11.</span><li class="steps-li">Giet de topping over de cake heen en bestrooi eventueel nog met wat extra chaikruidenmix of andere specerijen.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">12.</span><li class="steps-li">Tips: Voeg 1 of 2 verse steranijs toe aan de warme melk als dit niet in je chaikruidenmix verwerkt zit.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">13.</span><li class="steps-li">Voeg eventueel nog wat walnoten toe aan het beslag voor een lekkere crunch.</li></div>
-        <div class="li-flex"><span class="li-styling-numeric">14.</span><li class="steps-li">Maak er ook eens een heerlijke chai tea latte of kurkuma latte bij.</li></div>
+
+        {recipeSteps}
+
     </ol>
     <p class="recipe-steps-p">Eet smakelijk!</p>
 
@@ -115,3 +90,5 @@
         <a href="#2" title="Give 2 stars">★</a>
         <a href="#1" title="Give 1 star">★</a>
     </div>
+
+</section>
