@@ -24,6 +24,7 @@ class ComponentLoader {
   }
 
   public function loadRecipeContent(int $recipeId) : string {
+    // TODO: recipeId does not get validated, not good
     $recipeData = $this->database->getRecipe($recipeId);
     return $this->setComponentVariables(
       $this->getComponentFromFile("RecipeContent.html"),
@@ -87,9 +88,9 @@ class ComponentLoader {
 
 
 
-  return $loadRecipeGrid;
+    return $loadRecipeGrid;
 
-}
+  }
 
   // Generating content of sub-components
 

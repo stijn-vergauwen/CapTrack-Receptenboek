@@ -24,7 +24,7 @@ require_once("../Php/Main.php");
 
     <main class="page-content">
 
-        <?= $componentLoader->loadRecipeContent(1) ?>
+        <?= $componentLoader->loadRecipeContent((int)$_GET['id']) ?>
 
         <section class="underline-h2">
             
