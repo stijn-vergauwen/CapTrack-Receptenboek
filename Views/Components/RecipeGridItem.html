@@ -1,0 +1,25 @@
+<div class="recipe-grid-container-flex" onclick="location.href='{recipePage}';">
+    <div class="recipe-grid-container">
+        <img class="grid-obj-styling" src="{recipeThumbnail}" alt="">
+        <div class="recipe-grid-overlay">
+            <div class="recipe-overlay-text">{recipeDescription}</div>
+            <div class="info-overlay-div">
+                <div class="flex-icons">
+                    <p>moeilijkheid:</p>
+                    <div class="difficulty-icon-div">
+                        {difficultySelect}
+                    </div>
+                </div>
+
+                <div class="flex-icons">
+                    <p>tijd:</p>
+                    <div class="time-icon-div" >
+                        <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                        <p class="Required-time-text">{requiredRecipeTime}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="recipe-grid-name">{recipeTitle}</p>
+</div>
