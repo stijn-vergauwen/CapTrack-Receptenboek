@@ -7,6 +7,16 @@ class Database {
         $this->connection = new PDO($dsn, $user, $password);
     }
 
+    public function query(string $query) {
+        $stm = $this->connection->query($query);
+        return $stm->fetchAll();
+    }
+
+    public function queryToClass(string $query, string $className) {
+        $stm = $this->connection->query($query);
+        return $stm->fetchAll(PDO::FETCH_CLASS, $className);
+    }
+
     public function getAllRecipes() : array {
         $query = $this->connection->query('SELECT * FROM recipes');
         return $query->fetchAll();
