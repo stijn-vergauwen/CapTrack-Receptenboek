@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2022 at 10:52 AM
+-- Generation Time: Dec 07, 2022 at 02:26 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -48,7 +48,26 @@ INSERT INTO `ingredients` (`id`, `title`) VALUES
 (9, 'zakje zwarte thee'),
 (10, 'honing'),
 (11, 'poedersuiker'),
-(12, '(plantaardige) melk');
+(12, '(plantaardige) melk'),
+(13, 'zout'),
+(14, 'ui'),
+(15, 'knoflook'),
+(16, 'olie'),
+(17, 'wortel'),
+(18, 'bleekselderij'),
+(19, 'rundergehakt'),
+(20, 'oregano'),
+(21, 'tijm'),
+(22, 'tomatenpuree'),
+(23, 'tomaten'),
+(24, 'tomaten blokjes'),
+(25, 'runderbouillon'),
+(26, 'peper'),
+(27, 'mozarella'),
+(28, 'lasagnebladen'),
+(29, 'geraspte kaas'),
+(30, 'boter'),
+(31, 'bloem');
 
 -- --------------------------------------------------------
 
@@ -81,7 +100,21 @@ INSERT INTO `preparation_steps` (`id`, `recipe_id`, `body`, `list_order`) VALUES
 (11, 1, 'Giet de topping over de cake heen en bestrooi eventueel nog met wat extra chaikruidenmix of andere specerijen.', 11),
 (12, 1, 'Tips: Voeg 1 of 2 verse steranijs toe aan de warme melk als dit niet in je chaikruidenmix verwerkt zit.', 12),
 (13, 1, 'Voeg eventueel nog wat walnoten toe aan het beslag voor een lekkere crunch.', 13),
-(14, 1, 'Maak er ook eens een heerlijke chai tea latte of kurkuma latte bij.', 14);
+(14, 1, 'Maak er ook eens een heerlijke chai tea latte of kurkuma latte bij.', 14),
+(15, 2, 'Verwarm de oven voor op 200° graden.', 1),
+(16, 2, 'Snipper de ui en knoflook. Fruit dit aan in een grote pan met 1 eetlepel olie.', 2),
+(17, 2, 'Snijd de wortel en bleekselderij in kleine stukjes en voeg toe aan de pan.', 3),
+(18, 2, 'Voeg na een paar minuten het gehakt toe en bak mee.', 4),
+(19, 2, 'Voeg de oregano en tijm toe samen met de tomatenpuree.', 5),
+(20, 2, 'Doe dan de tomatenblokjes en gezeefde tomaten erbij en kruimel het bouillonblokje erbij. Laat de saus circa 30 minuten pruttelen.', 6),
+(21, 2, 'Breng de saus eventueel nog extra op smaak met een snufje peper en zout.', 7),
+(22, 2, 'Maak ondertussen de bechamelsaus. Smelt de boter in een pannetje en voeg de bloem toe. Bak deze roux 3 minuutjes zachtjes.', 8),
+(23, 2, 'Giet dan beetje bij beetje de melk erbij en roer met een garde tot een gladde saus. Breng de bechamelsaus op smaak met een beetje peper en zout en eventueel nootmuskaat.', 9),
+(24, 2, 'Snijd de mozzarella in dunne plakjes.', 10),
+(25, 2, 'Vet de ovenschaal in met een beetje olie of boter.', 11),
+(26, 2, 'Giet een klein beetje van de tomatensaus op de bodem. Leg hier 3 lasagnevellen op. Schep hier een beetje tomatensaus op en verdeel hier wat bechamelsaus over. Leg hier een paar plakjes mozzarella op. Dek af met lasagnebladen en herhaal dit tot de ingrediënten op zijn en eindig met een laag tomatensaus, bechamelsaus en mozzarella.', 12),
+(27, 2, 'Bestrooi de lasagne bolognese met de geraspte kaas en zet 45 minuten in de oven.', 13),
+(28, 2, 'Voor een vegetarische variant vervang je het rundergehakt door vegetarisch gehakt.', 14);
 
 -- --------------------------------------------------------
 
@@ -105,7 +138,8 @@ CREATE TABLE `recipes` (
 --
 
 INSERT INTO `recipes` (`id`, `added`, `title`, `description`, `duration`, `difficulty`, `default_people_amount`, `thumbnail`) VALUES
-(1, '2022-11-28 13:40:47', 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '1 uur 20 min', 3, 10, '../Img/chai-latte-cake.jpg');
+(1, '2022-11-28 13:40:47', 'Chai latte cake', 'Je favoriete herfstspecerijen verwerkt in een luchtige cake. Lekker met een chai latte drankje erbij.', '1 uur 20 min', 2, 10, '../Img/Thumbnails/chai-latte-cake.jpg'),
+(2, '2022-12-05 13:07:08', 'Lasagne bolognese', 'Het traditionele recept voor lasagne bolognese met een kruidige gehaktsaus en een romige bechamelsaus.', '1 uur 45 min', 2, 4, '../Img/Thumbnails/lasagne-bolognese.jpg');
 
 -- --------------------------------------------------------
 
@@ -135,8 +169,29 @@ INSERT INTO `recipes_ingredients` (`id`, `recipe_id`, `ingredient_id`, `amount`,
 (7, 1, 7, 0.2, NULL),
 (8, 1, 8, 6, 'ml'),
 (9, 1, 9, 0.1, NULL),
-(10, 1, 10, 0.1, 'kneepje'),
-(11, 1, 11, 16, 'gr');
+(10, 1, 10, NULL, 'kneepje'),
+(11, 1, 11, 16, 'gr'),
+(12, 1, 13, NULL, 'snufje'),
+(13, 2, 14, 0.25, NULL),
+(14, 2, 15, NULL, 'tenen'),
+(15, 2, 16, 0.5, 'eetlepels'),
+(16, 2, 17, 50, 'gr'),
+(17, 2, 18, 31, 'gr'),
+(18, 2, 19, 125, 'gr'),
+(19, 2, 20, 0.25, 'theelepels'),
+(20, 2, 21, 0.25, 'theelepels'),
+(21, 2, 22, 17.5, 'gr'),
+(22, 2, 23, 100, 'gr'),
+(23, 2, 24, 100, 'gr'),
+(24, 2, 25, 0.25, 'blokje'),
+(25, 2, 26, NULL, 'snufje'),
+(26, 2, 13, NULL, 'snufje'),
+(27, 2, 27, 0.5, 'bollen'),
+(28, 2, 28, 3, NULL),
+(29, 2, 29, NULL, 'handje'),
+(30, 2, 30, 12.5, 'gr'),
+(31, 2, 31, 15, 'gr'),
+(32, 2, 12, 150, 'ml');
 
 --
 -- Indexes for dumped tables
@@ -174,25 +229,25 @@ ALTER TABLE `recipes_ingredients`
 -- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `preparation_steps`
 --
 ALTER TABLE `preparation_steps`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `recipes`
 --
 ALTER TABLE `recipes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `recipes_ingredients`
 --
 ALTER TABLE `recipes_ingredients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
