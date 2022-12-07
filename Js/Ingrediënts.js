@@ -5,7 +5,7 @@ let ingredientAmount = document.querySelectorAll('.ingredient-amount')
 
 let personAmount = +personAmountText.innerText;
 
-let previousPresonAmount = 1
+let previousPersonAmount = 1
 
 ingredientAmount.forEach(changeAmount);
 
@@ -19,7 +19,7 @@ function ifAmountISNULL(item) {
 function addPersonAmount() {
 
 
-    previousPresonAmount = personAmount
+    previousPersonAmount = personAmount
 
     personAmount++;
     personAmountText.innerText = personAmount
@@ -31,7 +31,7 @@ function addPersonAmount() {
 function changeAmount (item) {
     if(ifAmountISNULL(item)) return
 
-    let singleAmount = +item.innerText / previousPresonAmount
+    let singleAmount = +item.innerText / previousPersonAmount
 
     if(personAmount <= 1) {
         personAmount = 1
@@ -48,7 +48,7 @@ function changeAmount (item) {
 
 function reducePersonAmount() {
 
-    previousPresonAmount = personAmount
+    previousPersonAmount = personAmount
 
     personAmount--;
     personAmountText.innerText = personAmount
