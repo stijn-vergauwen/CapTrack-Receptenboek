@@ -85,9 +85,9 @@ class ComponentLoader {
         $loadRecipeGrid .= $this->getComponentFromFile("RecipePlaceholder.html");
       };
 
-  return $loadRecipeGrid;
+    return $loadRecipeGrid;
 
-}
+  }
 
   // Generating content of sub-components
 

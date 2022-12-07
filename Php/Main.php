@@ -10,6 +10,13 @@ $database->createConnection("receptenboek", "root", "");
 
 $componentLoader = new ComponentLoader($pathToComponentsFolder, $database);
 
+function validateRecipeRequest($request) : int {
+    if(is_numeric($request)) {
+        return (int)$request;
+    }
+    return 1; // eigenlijk wil ik terug naar vorige page ofzo gaan.
+}
+
 
 // DB Tables structuur:
 // 
