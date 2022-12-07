@@ -17,7 +17,37 @@ class Database {
         return $query->fetch();
     }
 
+    public function getIngredientsFromRecipe(int $id) : array {
+        $query = $this->connection->query(
+            "SELECT * FROM recipes_ingredients
+            RIGHT JOIN ingredients
+            ON ingredients.id = recipes_ingredients.ingredient_id
+            WHERE recipes_ingredients.recipe_id = $id"
+        );
+        return $query->fetchAll();
+    }
+
     
 
+    public function getPreparationStepsFromRecipe(int $id) : array {
+        $query = $this->connection->query(
+            "SELECT * FROM preparation_steps
+            Where recipe_id = $id
+            ORDER BY list_order ASC"
+        );
+        return $query->fetchAll();
+    }
+
+
+    public function getLatestRecipes() : array {
+        $query = $this->connection->query(
+            "SELECT * FROM `recipes`
+            ORDER BY added DESC
+            LIMIT 6"
+        );
+        return $query->fetchall();
+
+
+    }
 
 }

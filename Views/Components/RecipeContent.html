@@ -1,0 +1,94 @@
+<section class="recipe-header">
+    <img src="{recipeImageLink}" alt="Een lekkere latte cake">
+    <div class="recipe-description">
+        <h1>{recipeTitle}</h1>
+        <p>{recipeDescription}</p>
+        
+        <div class="info-icon-wrapper">
+            <div class="difficulty-wrapper" >
+                <p>tijd</p>
+                <div class="time-icon-div" >
+                    <img src="../Img/clock-icon1.jpg" alt="clock icon">
+                    <p class="Required-time-text">{requiredRecipeTime}</p>
+                </div>
+            </div>
+            <div class="difficulty-wrapper">
+                <p>Moeilijkheid</p>
+                <div class="difficulty-icon-div">
+                    {difficultySelect}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-span-ingredients">
+    <div>
+        <h2>Ingrediënten</h2>
+    </div>
+</section>
+
+<section class="recipe-ingredients">
+
+    <div class="total-person-container">
+        <div class="container-button-wrap">
+            <div class="center-button-wrap">
+              <button class="btn-red" id="addPersonAmount">
+                <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
+                  <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
+                  <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
+                </svg>
+                <span>+</span>
+              </button>
+            </div>
+        </div>
+
+        <p id="personAmount">{defaultPeopleAmount}</p>
+        <p>Personen</p>
+
+        <div class="container-button-wrap">
+            <div class="center-button-wrap">
+              <button class="btn-red" id="reducePersonAmount">
+                <svg width="40px" height="30px" viewBox="0 0 40 30" class="border">
+                  <polyline points="40,1 40,30 1,30 1,1 40,1" class="bg-line" />
+                  <polyline points="40,1 40,30 1,30 1,1 40,1" class="hl-line" />
+                </svg>
+                <span>-</span>
+              </button>
+            </div>
+          </div>
+    </div>
+
+    <ul class="styling-ul">
+
+        {recipeIngredients}
+        
+    </ul>
+</section>
+
+<section class="page-span-Bereidingswijze">
+    <div>
+        <h2>Bereiding</h2>
+    </div>
+</section>
+    
+<section class="recipe-steps">
+
+    <ol class="recipe-steps-ol">
+
+        {recipeSteps}
+
+    </ol>
+    <p class="recipe-steps-p">Eet smakelijk!</p>
+
+    <!-- review -->
+    <p class="rating-text">Review recipe!</p>
+    <div class="rating rating2">
+        <a href="#5" title="Give 5 stars">★</a>
+        <a href="#4" title="Give 4 stars">★</a>
+        <a href="#3" title="Give 3 stars">★</a>
+        <a href="#2" title="Give 2 stars">★</a>
+        <a href="#1" title="Give 1 star">★</a>
+    </div>
+
+</section>
