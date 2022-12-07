@@ -85,8 +85,6 @@ class ComponentLoader {
         $loadRecipeGrid .= $this->getComponentFromFile("RecipePlaceholder.html");
       };
 
-
-
   return $loadRecipeGrid;
 
 }
@@ -147,6 +145,11 @@ class ComponentLoader {
     } else if($amountType == "kneepje") {
       $link = "https://www.youtube.com/watch?v=p7YXXieghto";
 
+    } else if ($amountType == "theelepels") {
+      $link = "https://www.voedingscentrum.nl/nl/gezonde-recepten/kookhulp/hoeveel-gram-milliliter-theelepel-eetlepel.aspx";
+      
+    } else if ($amountType == "eetlepels") {
+      $link = "https://www.voedingscentrum.nl/nl/gezonde-recepten/kookhulp/hoeveel-gram-milliliter-theelepel-eetlepel.aspx";
     }
 
     if($link == "") {
