@@ -37,8 +37,6 @@ class Database {
         return $query->fetchAll();
     }
 
-    
-
     public function getPreparationStepsFromRecipe(int $id) : array {
         $query = $this->connection->query(
             "SELECT * FROM preparation_steps
@@ -48,7 +46,6 @@ class Database {
         return $query->fetchAll();
     }
 
-
     public function getLatestRecipes() : array {
         $query = $this->connection->query(
             "SELECT * FROM `recipes`
@@ -56,7 +53,6 @@ class Database {
             LIMIT 6"
         );
         return $query->fetchall();
-
 
     }
 

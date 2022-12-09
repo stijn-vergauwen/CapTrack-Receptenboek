@@ -15,17 +15,10 @@ require_once("../Php/Main.php");
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Recepten Home</title>
-
 </head>
 
 <body>
@@ -35,12 +28,14 @@ require_once("../Php/Main.php");
     <section class="no-height-width">
         <div class="home-page-intro-wrap">
             <div class="logo-homepage"></div>
-            <div class="simple-flex-container-row">
-                <h1 class="white-h1">Cr</h1>
-                <h1 class="red-h1 animate__jackInTheBox">eat</h1>
-                <h1 class="white-h1">ive</h1>
-            </div>
-            <h1 class="white-h1 h1-loc">Recipes</h1>
+            <h1>
+                <div class="simple-flex-container-row">
+                    <span class="white-h1">Cr</span>
+                    <span class="red-h1">eat</span>
+                    <span class="white-h1">ive</span>
+                </div>
+                <span class="white-h1 h1-loc">Recipes</span>
+            </h1>
         </div>
     </section>
 

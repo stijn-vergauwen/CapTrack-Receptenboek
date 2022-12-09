@@ -80,5 +80,4 @@ personCounter.addEventListener('click', e => {
         reducePersonAmount()
     }
 
-
 })
