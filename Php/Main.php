@@ -3,8 +3,10 @@ require_once("Database.php");
 require_once("ComponentLoader.php");
 require_once("Controllers/RecipeController.php");
 require_once("Controllers/IngredientController.php");
+require_once("Controllers/PreparationStepsController.php");
 require_once("Models/Recipe.php");
 require_once("Models/Ingredient.php");
+require_once("Models/PreparationSteps.php");
 
 // setup classes
 $pathToComponentsFolder = "../Views/Components/";
