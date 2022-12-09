@@ -3,10 +3,12 @@
 class ComponentLoader {
   private $pathToComponents;
   private $database;
+  private $recipeController;
 
-  public function __construct(string $pathToComponents, Database $database) {
+  public function __construct(string $pathToComponents, Database $database, RecipeController $recipeController) {
     $this->pathToComponents = $pathToComponents;
     $this->database = $database;
+    $this->recipeController = $recipeController;
   }
 
   // Loading components to display in html
@@ -23,71 +25,9 @@ class ComponentLoader {
     return $this->getComponentFromFile("Footer.html");
   }
 
-  public function loadRecipeContent(int $recipeId) : string {
-    $recipeData = $this->database->getRecipe($recipeId);
-    return $this->setComponentVariables(
-      $this->getComponentFromFile("RecipeContent.html"),
-      array(
-        "{recipeImageLink}",
-        "{recipeTitle}",
-        "{recipeDescription}",
-        "{requiredRecipeTime}",
-        "{difficultySelect}",
-        "{defaultPeopleAmount}",
-        "{recipeIngredients}",
-        "{recipeSteps}"
-      ),
-      array(
-        $recipeData["thumbnail"],
-        $recipeData["title"],
-        $recipeData["description"],
-        $recipeData["duration"],
-        $this->generateRecipeDifficulty((int)$recipeData["difficulty"]),
-        $recipeData["default_people_amount"],
-        $this->generateRecipeIngredients($recipeId),
-        $this->generateRecipeSteps($recipeId)
-      )
-    );
-  }
+  
 
-  public function loadRecipeGrid() : string {
-    $latestRecipes = $this->database->getLatestRecipes();
-    $loadRecipeGrid = '';
 
-    foreach($latestRecipes as $singleRecipe) {
-      
-      $loadRecipeGrid .= $this->setComponentVariables(
-        $this->getComponentFromFile("RecipeGridItem.html"),
-        array(
-          "{recipePage}", 
-          "{recipeTitle}", 
-          "{recipeThumbnail}", 
-          "{recipeDescription}", 
-          "{difficultySelect}", 
-          "{requiredRecipeTime}"
-        ), 
-        array(
-          "../Views/Recipe.php?id=" . $singleRecipe["id"], 
-          $singleRecipe["title"], 
-          $singleRecipe["thumbnail"], 
-          $singleRecipe["description"], 
-          $this->generateRecipeDifficulty((int)$singleRecipe["difficulty"]), 
-          $singleRecipe["duration"]
-        )
-      );
-          
-    }
-
-    $missingRecipeCount = 6 - count($latestRecipes);
-    
-      for ($i = 0; $i < $missingRecipeCount; $i++) {
-
-        $loadRecipeGrid .= $this->getComponentFromFile("RecipePlaceholder.html");
-      };
-
-    return $loadRecipeGrid;
-
-  }
 
   // Generating content of sub-components
 
@@ -106,20 +46,7 @@ class ComponentLoader {
     return $navContent;
   }
 
-  function generateRecipeDifficulty(int $difficulty) : string {
-    $difficultyDisplay = "";
-
-    for($i = 0; $i < 3; $i++) {
-      $className = $i < $difficulty ? "" : "class='difficulty-icon-seethrough'";
-      $difficultyDisplay .= $this->setComponentVariables(
-        $this->getComponentFromFile("DifficultySelect.html"),
-        array("{class}"),
-        array($className)
-      );
-    }
-
-    return $difficultyDisplay;
-  }
+  
 
   function generateRecipeIngredients(int $recipeId) : string {
     $ingredientsList = "";

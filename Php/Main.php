@@ -10,14 +10,7 @@ $pathToComponentsFolder = "../Views/Components/";
 $database = new Database();
 $database->createConnection("receptenboek", "root", "");
 
-$componentLoader = new ComponentLoader($pathToComponentsFolder, $database);
-
-$recipeController = new RecipeController($database);
-
-function testModelData($recipeController) {
-    print_r($recipeController->getAllRecipes());
-}
-
+$componentLoader = new ComponentLoader($pathToComponentsFolder, $database, new Recipecontroller($database));
 
 function validateRecipeRequest($request) : int {
     if(is_numeric($request)) {
