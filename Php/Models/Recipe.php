@@ -4,13 +4,13 @@ class Recipe {
     public $id;
     public $title;
     public $description;
-    public $createdTimestamp;
+    public $created_timestamp;
     public $duration;
     public $difficulty;
-    public $defaultPeopleAmount;
+    public $default_people_amount;
     public $thumbnail;
     public $ingredients;
-    public $preparationSteps;
+    public $preparation_steps;
 
     public function SetIngredients(array $ingredients) {
         $this->ingredients = $ingredients;

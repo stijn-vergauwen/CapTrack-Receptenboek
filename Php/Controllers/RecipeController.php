@@ -19,15 +19,16 @@ class RecipeController {
             "SELECT * FROM `recipes`
             ORDER BY added DESC
             LIMIT $limit"
+            , "Recipe"
         );
     }
 
     // html loading
 
-    public function loadRecipeContent(int $recipeId) : string {
-        $recipeData = $this->recipeController->getRecipeById($recipeId);
-        return $this->setComponentVariables(
-            $this->getComponentFromFile("RecipeContent.html"),
+    public function loadRecipeContent(int $recipeId, ComponentLoader $componentLoader) : string {
+        $recipeData = $this->getRecipeById($recipeId);
+        return $componentLoader->setComponentVariables(
+            $componentLoader->getComponentFromFile("RecipeContent.html"),
             array(
                 "{recipeImageLink}",
                 "{recipeTitle}",
@@ -43,16 +44,16 @@ class RecipeController {
                 $recipeData->title,
                 $recipeData->description,
                 $recipeData->duration,
-                $this->generateRecipeDifficulty((int)$recipeData->difficulty),
-                $recipeData->defaultPeopleAmount,
-                $componentLoader->generateRecipeIngredients($recipeId),
+                $this->generateRecipeDifficulty((int)$recipeData->difficulty, $componentLoader),
+                $recipeData->default_people_amount,
+                $componentLoader->getRecipeIngredients($recipeId),
                 $componentLoader->generateRecipeSteps($recipeId)
             )
         );
     }
 
     public function loadRecipeGrid(ComponentLoader $componentLoader) : string {
-        $latestRecipes = $this->database->getLatestRecipes();
+        $latestRecipes = $this->getLatestRecipes(6);
         $loadRecipeGrid = '';
     
         foreach($latestRecipes as $singleRecipe) {
@@ -68,12 +69,12 @@ class RecipeController {
                     "{requiredRecipeTime}"
                 ), 
                 array(
-                    "../Views/Recipe.php?id=" . $singleRecipe["id"], 
-                    $singleRecipe["title"], 
-                    $singleRecipe["thumbnail"], 
-                    $singleRecipe["description"], 
-                    $this->generateRecipeDifficulty((int)$singleRecipe["difficulty"]), 
-                    $singleRecipe["duration"]
+                    "../Views/Recipe.php?id=" . $singleRecipe->id, 
+                    $singleRecipe->title, 
+                    $singleRecipe->thumbnail, 
+                    $singleRecipe->description, 
+                    $this->generateRecipeDifficulty((int)$singleRecipe->difficulty, $componentLoader), 
+                    $singleRecipe->duration
                 )
             );
               

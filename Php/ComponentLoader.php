@@ -4,11 +4,18 @@ class ComponentLoader {
   private $pathToComponents;
   private $database;
   private $recipeController;
+  private $ingredientController;
 
-  public function __construct(string $pathToComponents, Database $database, RecipeController $recipeController) {
+  public function __construct(
+    string $pathToComponents,
+    Database $database,
+    RecipeController $recipeController,
+    IngredientController $ingredientController
+  ) {
     $this->pathToComponents = $pathToComponents;
     $this->database = $database;
     $this->recipeController = $recipeController;
+    $this->ingredientController = $ingredientController;
   }
 
   // Loading components to display in html
@@ -25,9 +32,13 @@ class ComponentLoader {
     return $this->getComponentFromFile("Footer.html");
   }
 
-  
+  public function loadRecipeContent(int $recipeId) : string {
+    return $this->recipeController->loadRecipeContent($recipeId, $this);
+  }
 
-
+  public function loadRecipeGrid() : string {
+    return $this->recipeController->loadRecipeGrid($this);
+  }
 
   // Generating content of sub-components
 
@@ -46,7 +57,9 @@ class ComponentLoader {
     return $navContent;
   }
 
-  
+  function getRecipeIngredients(int $recipeId) {
+    return $this->ingredientController->generateRecipeIngredients($recipeId, $this);
+  }
 
   function generateRecipeSteps(int $recipeId) : string {
     $stepsList = "";

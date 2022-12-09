@@ -15,27 +15,27 @@ class IngredientController {
             RIGHT JOIN `ingredients`
             ON ingredients.id = recipes_ingredients.ingredient_id
             WHERE recipes_ingredients.recipe_id = $id"
-    
-        , "ingredients");
+      
+        , "Ingredient");
     }
 
     function generateRecipeIngredients(int $recipeId, ComponentLoader $componentLoader) : string {
         $ingredientsList = "";
         
-        $ingredients = $this->database->getIngredientsFromRecipe($recipeId);
+        $ingredients = $this->getIngredientsFromRecipe($recipeId);
         foreach($ingredients as $ingredient) {
-          $ingredientsList .= $componentLoader->setComponentVariables(
-            $componentLoader->getComponentFromFile("IngredientItem.html"),
-            array("{ingredientTitle}", "{ingredientAmountType}", "{ingredientAmount}"),
-            array($ingredient["title"], $this->checkIngredientAmountType((string)$ingredient["amount_type"]), $ingredient["amount"])
-          );
-        }
+            $ingredientsList .= $componentLoader->setComponentVariables(
+                $componentLoader->getComponentFromFile("IngredientItem.html"),
+                array("{ingredientTitle}", "{ingredientAmountType}", "{ingredientAmount}"),
+                array($ingredient->title, $this->checkIngredientAmountType((string)$ingredient->amount_type), $ingredient->amount)
+            );
+      }
     
         return $ingredientsList;
     }
 
 
-      function checkIngredientAmountType(string $amountType) : string {
+    function checkIngredientAmountType(string $amountType) : string {
         $link = "";
     
         if($amountType == "snufje") {
@@ -57,6 +57,6 @@ class IngredientController {
         } else {
           return "<a class='dumb-ingredient-type' href='$link'>$amountType</a>";
         }
-      }
+    }
 
 }

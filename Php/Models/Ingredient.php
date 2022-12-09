@@ -2,10 +2,9 @@
 
 class Ingredient {
     public $id;
-    public $recipeId;
-    public $ingredientId;
+    public $title;
     public $amount;
-    public $amountType;
+    public $amount_type;
 }
 
 ?>
