@@ -39,9 +39,34 @@ require_once("../Php/Main.php");
         </div>
     </section>
 
+    <section class="simple-flex-container">
+        <div id="intro-description-block" class="description-block width-70">
+            <button id="introduction-btn1" class="button-29 posleft1" role="button">←</button>
+            <h3 class="site-description-title">website description</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div id="intro-video-block1" class="recipe-picture-video-fill width-30">
+            <video class="video-side-descriptionblock" autoplay muted src="../Videos/Chai Spice Cake1080p.mp4" type="video/mp4"></video>
+        </div>
+    </section>
+
+    <section class="simple-flex-container">
+        <div id="intro-video-block2" class="recipe-picture-video-fill width-30">
+            <video class="video-side-descriptionblock" autoplay muted src="../Videos/What makes organic food organic720p.mp4" type="video/mp4"></video>
+        </div>
+        <div id="intro-organic-block" class="description-block width-70">
+            <button id="introduction-btn2" class="button-29 posright1" role="button">→</button>
+            <h3 class="site-description-title">Organic products</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    
+
     <main class="page-content">
+    
+        <section>
 
-
+        </section>
 
 
         <section class="recipe-grid-wrap">

@@ -1,13 +1,13 @@
 /* home-page-intro-wrap */
 
 .home-page-intro-wrap {
-background-image: url(../Img/homepageBG1.jpg);
-height: 110vh;
-width: 100%;
-background-size: 100%;
-object-fit: cover;
-background-repeat: no-repeat;
-position: relative;
+    background-image: url(../Img/homepageBG1.jpg);
+    height: 110vh;
+    width: 100%;
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .logo-homepage {
@@ -41,8 +41,6 @@ position: relative;
     font-family: 'Pacifico', cursive;
 }
 
-
-
 .white-h1 {
     font-weight: 100;
     color: var(--Main);
@@ -54,4 +52,104 @@ position: relative;
     right: 14vw;
     position: absolute;
     margin-top: 35%;
+}
+
+/* description block */
+.description-block {
+    height: 40rem;
+    background-color: var(--secondary);
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.site-description-title {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.recipe-picture-video-fill {
+    height: 40rem;
+    display: block;
+}
+
+.video-side-descriptionblock {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    display: block;
+}
+
+.simple-flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* button CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background: rgb(255,92,92);
+  background: linear-gradient(90deg, rgba(255,92,92,1) 0%, rgba(255,161,161,1) 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(66, 35, 35, 0.4) 0 2px 4px,rgba(66, 35, 35, 0.3) 0 7px 13px -3px,rgba(111, 58, 58, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 2rem;
+}
+
+.button-29:focus {
+  box-shadow: #e03c3c 0 0 0 1.5px inset, rgba(66, 35, 35, 0.4) 0 2px 4px, rgba(66, 35, 35, 0.3) 0 7px 13px -3px, #e03c3c 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(66, 35, 35, 0.4) 0 4px 8px, rgba(66, 35, 35, 0.3) 0 7px 13px -3px, #e03c3c 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #e03c3c 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.posleft1 {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+}
+
+.posright1 {
+    position: absolute;
+    left: 3rem;
+    top: 50%;
 }
