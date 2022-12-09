@@ -11,6 +11,4 @@ class Recipe {
     public $thumbnailLink;
     public $ingredients;
     public $preparationSteps;
-
-    
 }
