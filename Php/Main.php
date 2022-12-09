@@ -1,6 +1,10 @@
 <?php
 require_once("Database.php");
 require_once("ComponentLoader.php");
+require_once("Controllers/RecipeController.php");
+require_once("Controllers/IngredientController.php");
+require_once("Models/Recipe.php");
+require_once("Models/Ingredient.php");
 
 // setup classes
 $pathToComponentsFolder = "../Views/Components/";
@@ -8,7 +12,12 @@ $pathToComponentsFolder = "../Views/Components/";
 $database = new Database();
 $database->createConnection("receptenboek", "root", "");
 
-$componentLoader = new ComponentLoader($pathToComponentsFolder, $database);
+$componentLoader = new ComponentLoader(
+    $pathToComponentsFolder,
+    $database,
+    new Recipecontroller($database),
+    new IngredientController($database)
+);
 
 function validateRecipeRequest($request) : int {
     if(is_numeric($request)) {
