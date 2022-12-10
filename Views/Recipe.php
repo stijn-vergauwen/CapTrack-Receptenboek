@@ -26,7 +26,7 @@ require_once("../Php/Main.php");
 
         <?= $componentLoader->loadRecipeContent(validateRecipeRequest($_GET['id'])) ?>
 
-        <section class="underline-h2">
+        <section class="underline-h2 sectionMargin">
             
 
             <h2>bekijk ook!</h2>
@@ -34,7 +34,7 @@ require_once("../Php/Main.php");
         </section>
 
 
-        <section class="recipe-grid-wrap">
+        <section class="recipe-grid-wrap sectionMargin">
     
             <?= $componentLoader->loadRecipeGrid() ?>
 

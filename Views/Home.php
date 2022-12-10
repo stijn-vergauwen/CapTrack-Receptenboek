@@ -45,8 +45,9 @@ require_once("../Php/Main.php");
     <section class="simple-flex-container introduction-block">
         <div class="description-block width-70 bigpadding switchable-block">
             <button class="button-29 posleft1" role="button">←</button>
-            <h3 class="site-description-title">website description</h3>
-            <p class="displayAll">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="site-description-title">About Us!</h3>
+            <p class="displayAll">Home cooks are our heroes it's as simple as that. Stijn's and Joost's kitchen is a community built by kitchen experts with recipes made simple for a cook of every skill level: We are a community for the cooks who will dedicate the weekend to a perfect beef bourguignon but love the simplicity of a slow-cooker rendition, too. The bakers who labor over a showstopping 9-layer cake but will just as happily doctor boxed brownies for a decadent weeknight dessert. The entertainers who just want a solid snack spread, without tons of dirty dishes at the end of the night.
+                Most importantly, Stijn's and Joost's kitchen connects home cooks with their greatest sources of inspiration — other home cooks. We're the world's leading digital food brand, and that inspires us to do everything possible to keep our community connected. Two ;) home cooks deserve no less.</p>
         </div>
         <div class="recipe-picture-video-fill width-30 switchable-block">
             <video class="video-side-descriptionblock" autoplay muted src="../Videos/Chai Spice Cake1080p.mp4" type="video/mp4"></video>
@@ -57,22 +58,34 @@ require_once("../Php/Main.php");
         <div class="recipe-picture-video-fill width-30 switchable-block">
             <video class="video-side-descriptionblock" autoplay muted src="../Videos/What makes organic food organic720p.mp4" type="video/mp4"></video>
         </div>
-        <div class="description-block width-70 bigpadding switchable-block">
+        <div class="description-block1 width-70 bigpadding switchable-block">
             <button class="button-29 posright1" role="button">→</button>
-            <h3 class="site-description-title">Organic products</h3>
-            <p class="displayAll">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="site-description-title">Organic Ingredients.</h3>
+            <p class="displayAll textColor">organic food is fresh or processed food produced by organic farming methods. Organic food is grown without the use of synthetic chemicals, such as human-made pesticides and fertilizers, and does not contain genetically modified organisms (GMOs). Organic foods include fresh produce, meats, and dairy products as well as processed foods such as crackers, drinks, and frozen meals. The market for organic food has grown significantly since the late 20th century, becoming a multibillion dollar industry with distinct production, processing, distribution, and retail systems.</p>
+        </div>
+    </section>
+
+    <section class="simple-flex-container introduction-block">
+        <div class="description-block width-70 bigpadding switchable-block">
+            <button class="button-29 posleft1" role="button">←</button>
+            <h3 class="site-description-title">History.</h3>
+            <p class="displayAll">Our Website was established in november, 23 2023. Since then it's community has grown to over 2 people worldwide and plans continue to extend, that is not the end of the story...We have a passion for and the expertise of cooking and want to share it with people, no matter where they're from or their experience, just good food for everyone.</p>
+        </div>
+        <div class="recipe-picture-video-fill width-30 switchable-block">
+            <video class="video-side-descriptionblock" autoplay muted src="../Videos/Cooking Campfire Pizza on The Sadj Grill, The Best Pizza You'll Ever Eat.mp4" type="video/mp4"></video>
         </div>
     </section>
     
 
     <main class="page-content">
     
-        <section>
-
+        <section class="underline-h2 sectionMargin">
+            <h2>Laatste recepten!</h2>
+            <span class=""></span>
         </section>
 
 
-        <section class="recipe-grid-wrap">
+        <section class="recipe-grid-wrap sectionMargin">
             
             <?= $componentLoader->loadRecipeGrid() ?>
             

@@ -24,13 +24,21 @@ class ComponentLoader {
     return $this->setComponentVariables(
       $this->getComponentFromFile("Header.html"),
       array("{recipes}"),
-      array($this->generateHeaderNavContent())
+      array($this->generateNavContent())
+    );
+  }
+  
+  public function loadFooter() : string {
+    return $this->setComponentVariables(
+      $this->getComponentFromFile("Footer.html"),
+      array("{recipes}"),
+      array($this->generateNavContent())
     );
   }
 
-  public function loadFooter() : string {
-    return $this->getComponentFromFile("Footer.html");
-  }
+  // public function loadFooter() : string {
+  //   return $this->getComponentFromFile("Footer.html");
+  // }
 
   public function loadRecipeContent(int $recipeId) : string {
     return $this->recipeController->loadRecipeContent($recipeId, $this);
@@ -42,7 +50,7 @@ class ComponentLoader {
 
   // Generating content of sub-components
 
-  function generateHeaderNavContent() : string {
+  function generateNavContent() : string {
     $navContent = "";
 
     $recipes = $this->database->getAllRecipes();
