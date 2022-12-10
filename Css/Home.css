@@ -58,26 +58,53 @@
 .description-block {
     height: 40rem;
     background-color: var(--secondary);
-    padding-left: 12rem;
-    padding-right: 12rem;
     padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     position: relative;
+}
+
+.bigpadding {
+    padding-left: 12rem;
+    padding-right: 12rem;  
+}
+
+.smallpadding {
+    padding-left: 4rem;
+    padding-right: 4rem;  
+}
+
+.displayNone {
+    visibility: 0;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.displayAll {
+    visibility: 1;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .site-description-title {
     font-size: 3rem;
     color: var(--accent);
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .width-30 {
     width: 30%;
+    transition: width 0.5s linear;
 }
 
 .width-70 {
     width: 70%;
+    transition: width 0.5s linear;
 }
 
 .recipe-picture-video-fill {
@@ -95,6 +122,12 @@
 .simple-flex-container {
     display: flex;
     flex-direction: row;
+}
+
+.set-center {
+    top: 50%;
+    transition: top 1s linear;
+    margin-top: -1rem;
 }
 
 /* button CSS */
@@ -126,6 +159,7 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 2rem;
+  z-index: 100;
 }
 
 .button-29:focus {
@@ -146,10 +180,34 @@
     position: absolute;
     right: 3rem;
     top: 50%;
+    transition: right 0.5s linear;
+}
+.posleft2 {
+    position: absolute;
+    right: -7rem;
+    top: 50%;
+    opacity: 0.5;
+    transition: right 0.5s linear;
+}
+
+.posleft2:hover {
+    opacity: 1;
 }
 
 .posright1 {
     position: absolute;
     left: 3rem;
     top: 50%;
+    
+}
+
+.posright2 {
+    position: absolute;
+    left: -7rem;
+    top: 50%;
+    opacity: 0.5;
+}
+
+.posright2:hover {
+    opacity: 1;
 }
