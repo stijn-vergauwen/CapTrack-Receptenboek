@@ -101,7 +101,6 @@
     position: relative;
     top: 0;
     transition: top 0.5s linear;
-    overflow: hidden;
 }
 
 .width-30 {
@@ -223,3 +222,109 @@
 .textColor {
     color: var(--Main);
 }
+
+/* prices */
+
+.flex-gap {
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+.space-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-container {
+    width: 25rem;
+    height: 35rem;
+    padding: 3rem;
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(1, 1);
+    transition: all 0.3s ease-in;
+}
+
+.product-container p{
+    color: var(--offset)
+}
+
+.product-container-popular {
+    width: 25rem;
+    height: 35rem;
+    padding: 3rem;
+    background-color: var(--offset);
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-in;
+}
+
+.product-container-popular .product-container{
+    display: none;
+}
+
+.product-container-popular p{
+    color: var(--Main)
+}
+
+.li-invert {
+    filter: invert(1);
+    color: rgb(91, 91, 91);
+}
+
+.li-invert b{
+    font-weight: 900;
+    color: black;
+}
+
+
+.simple-flex-container li {
+    list-style: url(../Img/Icons/done_FILL0_wght600_GRAD0_opsz48.png);
+
+}
+
+.simple-flex-container li b {
+    font-weight: 900;
+}
+
+.popular-tag{
+    position: absolute;
+    background-color: var(--Main);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    right: 1rem;
+    top: 1rem;
+
+}
+
+.popular-tag .star {
+    color: gold;
+}
+.popular-tag p {
+    color: var(--offset);
+}
+
+.btn-loc {
+    left: 0;
+    bottom: 0;
+}
+
+.set-height {
+    height: 35rem;
+}
+

@@ -36,8 +36,9 @@ function switchIntroductionWidth (target) {
 
     }
 
-    if(btn == null) return
-    btn.innerText = changeArrowDirection(btn)
+    if (btn != null) {
+        btn.innerText = changeArrowDirection(btn)
+    }
 }
 
 function changeMargin(target) {
@@ -56,57 +57,61 @@ function descriptionInvis (target) {
     let pTag = target.querySelector('p')
     let h3Tag = target.querySelector('h3')
 
-    if(pTag == null) return
-    if(pTag.matches(".displayAll")) {
-        h3Tag.classList.toggle("set-center")
-        pTag.classList.remove("displayAll");
-        pTag.classList.add("displayNone");
-        
-    } else {
-        h3Tag.classList.toggle("set-center")
-        pTag.classList.add("displayAll");
-        pTag.classList.remove("displayNone");
+    if (pTag != null) {
 
-    }
+        if(pTag.matches(".displayAll")) {
+            h3Tag.classList.toggle("set-center")
+            pTag.classList.remove("displayAll");
+            pTag.classList.add("displayNone");
+            
+        } else {
+            h3Tag.classList.toggle("set-center")
+            pTag.classList.add("displayAll");
+            pTag.classList.remove("displayNone");
     
+        }
+    } 
 }
 
 function changeBtnLoc (target) {
     let btn = target.querySelector('button')
 
-    if(btn == null) return
-    if (btn.matches(".posright1")) {
-        btn.classList.add("posright2");
-        btn.classList.remove("posright1");
+    if(btn != null) {
 
-    } else if (btn.matches(".posright2")){
-        btn.classList.add("posright1");
-        btn.classList.remove("posright2");
-
+        if (btn.matches(".posright1")) {
+            btn.classList.add("posright2");
+            btn.classList.remove("posright1");
+    
+        } else if (btn.matches(".posright2")){
+            btn.classList.add("posright1");
+            btn.classList.remove("posright2");
+    
+        }
+    
+        if (btn.matches(".posleft1")) {
+            btn.classList.add("posleft2");
+            btn.classList.remove("posleft1");
+    
+        } else if (btn.matches(".posleft2")){
+            btn.classList.add("posleft1");
+            btn.classList.remove("posleft2");
+    
+        }
     }
-
-    if (btn.matches(".posleft1")) {
-        btn.classList.add("posleft2");
-        btn.classList.remove("posleft1");
-
-    } else if (btn.matches(".posleft2")){
-        btn.classList.add("posleft1");
-        btn.classList.remove("posleft2");
-
-    }
-
 }
 
 function toggleControls(target) {
     let video = target.querySelector('video')
     
-    if(video == null) return
-    if (video.hasAttribute("controls")) {
-       video.removeAttribute("controls")   
-    } else {
-       video.setAttribute("controls","controls")   
+    if(video != null) {
+        if (video.hasAttribute("controls")) {
+           video.removeAttribute("controls")   
+        } else {
+           video.setAttribute("controls","controls")   
+        }
+        
     }
-  }
+}
 
 function changeArrowDirection(btn) {
 

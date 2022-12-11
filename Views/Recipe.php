@@ -22,7 +22,7 @@ require_once("../Php/Main.php");
     
     <?= $componentLoader->loadHeader() ?>
 
-    <main class="page-content">
+    <main class="page-content recipe-header-space">
 
         <?= $componentLoader->loadRecipeContent(validateRecipeRequest($_GET['id'])) ?>
 
