@@ -330,7 +330,7 @@
 
 
 /* mediaQueries */
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1400px) {
     .page-content .simple-flex-container {
         flex-direction: column;
     }
