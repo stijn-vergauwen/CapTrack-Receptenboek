@@ -36,10 +36,6 @@ class ComponentLoader {
     );
   }
 
-  // public function loadFooter() : string {
-  //   return $this->getComponentFromFile("Footer.html");
-  // }
-
   public function loadRecipeContent(int $recipeId) : string {
     return $this->recipeController->loadRecipeContent($recipeId, $this);
   }
@@ -69,20 +65,8 @@ class ComponentLoader {
     return $this->ingredientController->generateRecipeIngredients($recipeId, $this);
   }
 
-  function generateRecipeSteps(int $recipeId) : string {
-    $stepsList = "";
-
-    $steps = $this->database->getPreparationStepsFromRecipe($recipeId);
-    foreach($steps as $step) {
-      $stepsList .= $this->setComponentVariables(
-        $this->getComponentFromFile("RecipeStepItem.html"),
-        array("{listOrder}", "{body}"),
-        array($step["list_order"], $step["body"])
-      );
-    }
-
-    return $stepsList;
-  }
+  // TODO: make function, code doesn't work currently
+  // function Get
 
   // Utility
 
