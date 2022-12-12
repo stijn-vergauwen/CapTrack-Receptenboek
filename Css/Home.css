@@ -58,26 +58,59 @@
 .description-block {
     height: 40rem;
     background-color: var(--secondary);
-    padding-left: 12rem;
-    padding-right: 12rem;
     padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     position: relative;
+}
+.description-block1 {
+    height: 40rem;
+    background-color: var(--offset);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.bigpadding {
+    padding-left: 12rem;
+    padding-right: 12rem;  
+}
+
+.smallpadding {
+    padding-left: 4rem;
+    padding-right: 4rem;  
+}
+
+.displayNone {
+    visibility: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out 0.1;
+}
+
+.displayAll {
+    visibility: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.5s;
 }
 
 .site-description-title {
     font-size: 3rem;
     color: var(--accent);
     margin-bottom: 2rem;
+    position: relative;
+    top: 0;
+    transition: top 0.5s linear;
 }
 
 .width-30 {
     width: 30%;
+    transition: width 0.5s linear;
 }
 
 .width-70 {
     width: 70%;
+    transition: width 0.5s linear;
 }
 
 .recipe-picture-video-fill {
@@ -95,6 +128,12 @@
 .simple-flex-container {
     display: flex;
     flex-direction: row;
+}
+
+.set-center {
+    top: 50%;
+    transition: top 0.5s linear;
+    margin-top: -1rem;
 }
 
 /* button CSS */
@@ -126,6 +165,7 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 2rem;
+  z-index: 50;
 }
 
 .button-29:focus {
@@ -146,10 +186,158 @@
     position: absolute;
     right: 3rem;
     top: 50%;
+    transition: right 0.5s linear;
+}
+.posleft2 {
+    position: absolute;
+    right: -7rem;
+    top: 50%;
+    opacity: 0.5;
+    transition: right 0.5s linear;
+}
+
+.posleft2:hover {
+    opacity: 1;
 }
 
 .posright1 {
     position: absolute;
     left: 3rem;
     top: 50%;
+    transition: left 0.5s linear;
 }
+
+.posright2 {
+    position: absolute;
+    left: -7rem;
+    top: 50%;
+    opacity: 0.5;
+    transition: left 0.5s linear;
+}
+
+.posright2:hover {
+    opacity: 1;
+}
+
+.textColor {
+    color: var(--Main);
+}
+
+/* prices */
+
+.flex-gap {
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+.space-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-container {
+    width: 25rem;
+    height: 35rem;
+    padding: 3rem;
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scale(1, 1);
+    transition: all 0.3s ease-in;
+}
+
+.product-container p{
+    color: var(--offset)
+}
+
+.product-container-popular {
+    width: 25rem;
+    height: 35rem;
+    padding: 3rem;
+    background-color: var(--offset);
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s ease-in;
+}
+
+.product-container-popular .product-container{
+    display: none;
+}
+
+.product-container-popular p{
+    color: var(--Main)
+}
+
+.li-invert {
+    filter: invert(1);
+    color: rgb(91, 91, 91);
+}
+
+.li-invert b{
+    font-weight: 900;
+    color: black;
+}
+
+
+.simple-flex-container li {
+    list-style: url(../Img/Icons/done_FILL0_wght600_GRAD0_opsz48.png);
+
+}
+
+.simple-flex-container li b {
+    font-weight: 900;
+}
+
+.popular-tag{
+    position: absolute;
+    background-color: var(--Main);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    right: 1rem;
+    top: 1rem;
+
+}
+
+.popular-tag .star {
+    color: gold;
+}
+.popular-tag p {
+    color: var(--offset);
+}
+
+.btn-loc {
+    left: 0;
+    bottom: 0;
+}
+
+.set-height {
+    height: 35rem;
+}
+
+
+/* mediaQueries */
+@media only screen and (max-width: 1400px) {
+    .page-content .simple-flex-container {
+        flex-direction: column;
+    }
+
+    .set-height {
+        height: 100%;
+    }
+
+}
+
