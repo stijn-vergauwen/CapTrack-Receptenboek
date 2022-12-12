@@ -328,3 +328,16 @@
     height: 35rem;
 }
 
+
+/* mediaQueries */
+@media only screen and (max-width: 1550px) {
+    .page-content .simple-flex-container {
+        flex-direction: column;
+    }
+
+    .set-height {
+        height: 100%;
+    }
+
+}
+
